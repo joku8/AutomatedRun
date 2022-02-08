@@ -39,11 +39,9 @@ jobs:
       - name: List files in the repository
         run: |
           ls -R /pysims/data
-      - name: Commit changes
-        with: gha-utilities/workspace-commit@v0.0.4
-            author: ${{ github.author }}
-            email: para2x@gmail.com
-            message: Updates compiled site files
-            all: true
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Apply php-cs-fixer changes
       
 
