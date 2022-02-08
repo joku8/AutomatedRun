@@ -46,13 +46,9 @@ jobs:
         run: |
           . /pysims/data/Sims/Champaign/test_apsim_TL.sh   
           
-      - name: 6-Cleaning dirs
+      - name: 6-Cleaning the dir
         run: |
-          rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims 
-     
-     - name: 6.1-Cleaning the dir
-        run: |
-           find /pysims/data -name "*.nc4" -type f -delete
+          rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims        
             
       - name: 7-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
