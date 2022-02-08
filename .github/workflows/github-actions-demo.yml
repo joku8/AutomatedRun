@@ -13,7 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: 1-Install git
-        run:  apt-get update -y && sudo apt-get upgrade -y && apt-get install -y git
+        run:  | 
+            apt-get install -y apt-transport-https ca-certificates \ 
+            && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 51716619E084DAB9 \
+            && apt-get update --fix-missingapt-get update -y && sudo apt-get upgrade -y && apt-get install -y git
         
       - name: 2-Checkout the latest data inputs 
         uses: actions/checkout@main
