@@ -11,17 +11,18 @@ jobs:
         volumes:
             - ${{ github.workspace }}:/pysims/data
     steps:
+      - name: 1-Install git
+        run:  | 
+            apt-get install -y software-properties-common \
+            && apt-get update \
+            && add-apt-repository -y ppa:git-core/ppa \
+            && apt-get update \
+            && apt-get install -y git
       - uses: actions/checkout@v2
         with:
             ref: ${{ github.head_ref }}
             
-      - name: 1-Install git
-        run:  | 
-            apt-get install -y software-properties-common \
-            && sudo apt-get update \
-            && sudo add-apt-repository -y ppa:git-core/ppa \
-            && sudo apt-get update \
-            && sudo apt-get install -y git
+
         
       - name: 2-Checkout the latest data inputs 
         uses: actions/checkout@main
