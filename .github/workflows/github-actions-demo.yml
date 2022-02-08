@@ -28,6 +28,7 @@ jobs:
         with:
           repository: AgronomicForecastingLab/pysims
           token: ${{ secrets.GITHUBTOKEN }}
+          path: pysims
           
       - name: List files in the repository
         run: |
