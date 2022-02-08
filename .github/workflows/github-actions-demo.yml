@@ -13,28 +13,32 @@ jobs:
     steps:
  #     - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}, ${{ github.repository }}, ${{ job.status }}"
       
-      - name: Checkout the latest data inputs 
+      - name: 1- Checkout the latest data inputs 
         uses: actions/checkout@main
         with:
           repository: FarmerAssist/ModelInputs
           path: Data
           
-      - name: Checkout the latest simulation
+      - name: 2- Checkout the latest simulation
         uses: actions/checkout@v2
         with:
           repository: FarmerAssist/Simulation
           path: Sims
           
-      - name: Checkout the latest pSIMS
+      - name: 3- Checkout the latest pSIMS
         uses: actions/checkout@v2
         with:
           repository: AgronomicForecastingLab/pysims
           token: ${{ secrets.GITHUBTOKEN }}
           path: pysims
      
-      - name: Run the model
+      - name: 4- Run the model
         run: |
-          . /pysims/data/Sims/Champaign/test_apsim_TL.sh        
+          . /pysims/data/Sims/Champaign/test_apsim_TL.sh   
+          
+      - name: 5- Cleaning the outputs
+        run: |
+          rm /pysims/data/*.nc /pysims/data/*.tar /pysims/data/*.nc4             
       - name: List files in the repository
         run: |
           ls -R /pysims/data
