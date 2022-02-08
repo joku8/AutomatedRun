@@ -14,7 +14,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
             ref: ${{ github.head_ref }}
-           
+      - name: test-info
+        run: git log --pretty=oneline
       - name: 1-Install git
         run:  apt-get install -y git
         
@@ -41,7 +42,8 @@ jobs:
         run: |
           . /pysims/data/Sims/Champaign/test_apsim_TL.sh   
             
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: 6- Commit the model outputs
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Bot] Update all the things!"
           repository: /pysims/data/
