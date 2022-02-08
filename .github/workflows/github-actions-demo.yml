@@ -56,7 +56,7 @@ jobs:
       
       - name: 6.2-Cleaning files tar
         run: |
-          find /pysims/data -name "*.tar" -type f -delete 
+          find /pysims/data -name "*.tar*" -type f -delete 
           
       - name: 6.3-Cleaning files sims
         run: |
