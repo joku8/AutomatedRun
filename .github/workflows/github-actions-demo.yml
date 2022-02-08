@@ -49,8 +49,8 @@ jobs:
       - name: 6-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[Bot] Update all the things!"
-          repository: /pysims/data/
+          commit_message: "A new round of simulations"
+          file_pattern: *.csv *.met *.out
       
 
       
