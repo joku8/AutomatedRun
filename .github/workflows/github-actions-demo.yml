@@ -17,15 +17,14 @@ jobs:
         uses: actions/checkout@main
         with:
           repository: FarmerAssist/ModelInputs
-          repository: FarmerAssist/Simulation
           
       - name: Check out the latest simulation
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
         with:
           repository: FarmerAssist/Simulation
           
       - name: Check out the latest pSIMS
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
         with:
           repository: AgronomicForecastingLab/pysims
           token: ${{ secrets.GITHUBTOKEN }}
