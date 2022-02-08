@@ -13,7 +13,7 @@ jobs:
     steps:
  #     - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}, ${{ github.repository }}, ${{ job.status }}"
       
-      - name: Checkout the latest data inputs
+      - name: Checkout the latest data inputs 
         uses: actions/checkout@main
         with:
           repository: FarmerAssist/ModelInputs
