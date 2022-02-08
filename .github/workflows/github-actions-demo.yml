@@ -46,19 +46,19 @@ jobs:
         run: |
           . /pysims/data/Sims/Champaign/test_apsim_TL.sh   
           
-      - name: 6-Cleaning dirs
+      - name: 6.0- Cleaning dirs
         run: |
           rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims  
 
-      - name: 6.1-Cleaning files
+      - name: 6.1-Cleaning files nc
         run: |
           find /pysims/data -name "*.nc*" -type f -delete
       
-      - name: 6.2-Cleaning files
+      - name: 6.2-Cleaning files tar
         run: |
           find /pysims/data -name "*.tar" -type f -delete 
           
-      - name: 6.3-Cleaning files
+      - name: 6.3-Cleaning files sims
         run: |
           find /pysims/data -name "*.sim" -type f -delete           
           
