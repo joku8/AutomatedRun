@@ -33,16 +33,18 @@ jobs:
       - name: Run the model
         run: |
           . /pysims/data/Sims/Champaign/test_apsim_TL.sh   
-                 
-      - name: List files in the repository
-        run: |
-          ls -R /pysims/data
-      
-      - name: commit and push
+     
+     - name: commit and push
       uses: stefanzweifel/git-auto-commit-action@v4
       with: 
         commit: "Apply automatic changes"
         branch: "automatic-sync"
-        file_pattern: ".editorconfig"
+        file_pattern: *.out    
+        
+      - name: List files in the repository
+        run: |
+          ls -R /pysims/data
+      
+
       
 
