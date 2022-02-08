@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: 1-Install git
-        run:  apt-get update && sudo apt-get upgrade && apt-get install -y git
+        run:  apt-get update -y && sudo apt-get upgrade -y && apt-get install -y git
         
       - name: 2-Checkout the latest data inputs 
         uses: actions/checkout@main
