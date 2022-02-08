@@ -12,13 +12,23 @@ jobs:
             - ${{ github.workspace }}:/pysims/data
     steps:
       - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}, ${{ github.repository }}, ${{ job.status }}"
-
+      
+      - name: Check out the latest data inputs
+        uses: actions/checkout@main
+        with:
+          repository: FarmerAssist/ModelInputs
+          
+      - name: Check out the latest simulation
+        uses: actions/checkout@main
+        with:
+          repository: FarmerAssist/Simulation
+          
       - name: Check out the latest pSIMS
         uses: actions/checkout@main
         with:
           repository: AgronomicForecastingLab/pysims
           token: ${{ secrets.GITHUBTOKEN }}
-
+          
       - name: List files in the repository
         run: |
           ls -R /pysims/data
