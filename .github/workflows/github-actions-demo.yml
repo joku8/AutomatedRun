@@ -14,7 +14,9 @@ jobs:
       - name: 1-Install git
         run:  | 
             apt-get install -y software-properties-common \
-            && apt-get update \
+            apt-get install -y apt-transport-https ca-certificates \ 
+            && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 51716619E084DAB9 \
+            && apt-get update --fix-missing \
             && add-apt-repository -y ppa:git-core/ppa \
             && apt-get update \
             && apt-get install -y git
