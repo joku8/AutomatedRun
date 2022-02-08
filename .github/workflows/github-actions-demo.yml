@@ -52,7 +52,15 @@ jobs:
 
       - name: 6.1-Cleaning files
         run: |
-          find /pysims/data -name "*.nc" -o -name "*.sim" -type f -delete
+          find /pysims/data -name "*.nc*" -type f -delete
+      
+      - name: 6.2-Cleaning files
+        run: |
+          find /pysims/data -name "*.tar" -type f -delete 
+          
+      - name: 6.3-Cleaning files
+        run: |
+          find /pysims/data -name "*.sim" -type f -delete           
           
       - name: 7-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
