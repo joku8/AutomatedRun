@@ -8,6 +8,9 @@ jobs:
         volumes:
             - ${{ github.workspace }}:/mydatadir
     steps:
+      - uses: actions/checkout@v1
+      - name: Login to DockerHub Registry
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
       - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}"
       - name: Check out repository code
         uses: actions/checkout@v2
