@@ -4,19 +4,21 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     container:
-        image: para2x/uiuc_custom_full_psims:latest
+        image: para2x/uiuc_custom_full_psims:3.0
         credentials:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_PASSWORD }}
         volumes:
             - ${{ github.workspace }}:/pysims/data
     steps:
-      - name: 1-Install git
-        run:  | 
-            apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 51716619E084DAB9 \
-            && apt-get update --fix-missing \
-            && add-apt-repository -y ppa:git-core/ppa \
-            && apt-get install -y git
+      - name: Force Install GIT latest
+        run: |
+          apt-get install -y software-properties-common \
+          && apt-get update \
+          && add-apt-repository -y ppa:git-core/ppa \
+          && apt-get update \
+          && apt-get install -y git
+          
       - uses: actions/checkout@v2
         with:
             ref: ${{ github.head_ref }}
