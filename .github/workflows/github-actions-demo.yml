@@ -12,6 +12,9 @@ jobs:
             - ${{ github.workspace }}:/pysims/data
     steps:
       - uses: actions/checkout@v2
+      - name: install git
+        run:  apt-get install -y git
+        
       - name: Checkout the latest data inputs 
         uses: actions/checkout@main
         with:
