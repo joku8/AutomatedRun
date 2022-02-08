@@ -11,28 +11,26 @@ jobs:
         volumes:
             - ${{ github.workspace }}:/pysims/data
     steps:
- #     - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}, ${{ github.repository }}, ${{ job.status }}"
-      
-      - name: 1- Checkout the latest data inputs 
+      - name: Checkout the latest data inputs 
         uses: actions/checkout@main
         with:
           repository: FarmerAssist/ModelInputs
           path: Data
           
-      - name: 2- Checkout the latest simulation
+      - name: Checkout the latest simulation
         uses: actions/checkout@v2
         with:
           repository: FarmerAssist/Simulation
           path: Sims
           
-      - name: 3- Checkout the latest pSIMS
+      - name: Checkout the latest pSIMS
         uses: actions/checkout@v2
         with:
           repository: AgronomicForecastingLab/pysims
           token: ${{ secrets.GITHUBTOKEN }}
           path: pysims
      
-      - name: 4- Run the model
+      - name: Run the model
         run: |
           . /pysims/data/Sims/Champaign/test_apsim_TL.sh   
                  
