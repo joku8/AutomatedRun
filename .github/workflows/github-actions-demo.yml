@@ -48,7 +48,8 @@ jobs:
           
       - name: 6-Cleaning the dir
         run: |
-          rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims        
+          rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims \ 
+            && find /pysims/data -name "*.nc4" -type f -delete
             
       - name: 7-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
