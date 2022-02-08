@@ -34,7 +34,7 @@ jobs:
      
       - name: Run the model
         run: |
-          . /pysims/data/Sims/Champaign/test_apsim_TL.sh         
+          . /pysims/data/Sims/Champaign/test_apsim_TL.sh        
       - name: List files in the repository
         run: |
           ls -R /pysims/data
