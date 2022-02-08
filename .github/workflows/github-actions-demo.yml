@@ -45,6 +45,10 @@ jobs:
       - name: 5-Run the model
         run: |
           . /pysims/data/Sims/Champaign/test_apsim_TL.sh   
+          
+      - name: 6-Cleaning the dir
+        run: |
+          rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims        
             
       - name: 6-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -52,7 +56,6 @@ jobs:
           commit_message: "A new round of simulations"
           repository: /pysims/data/
           file_pattern: ".csv .met .out"
-          branch: "modelResults"
       
 
       
