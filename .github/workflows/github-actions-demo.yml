@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     container:
-        image: para2x/soilgrid:latest
+        image: para2x/uiuc_custom_full_psims:latest
         volumes:
             - ${{ github.workspace }}:/mydatadir
     steps:
