@@ -50,12 +50,11 @@ jobs:
         run: |
           rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims        
             
-      - name: 6-Commit the model outputs
+      - name: 7-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "A new round of simulations"
           repository: /pysims/data/
-          file_pattern: ".csv .met .out"
       
 
       
