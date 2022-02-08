@@ -1,9 +1,12 @@
-name: GitHub Actions Demo
+name: Run Regional
 on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+     container:
+     image: node:10.16-jessie
     steps:
+    
       - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}"
       - name: Check out repository code
         uses: actions/checkout@v2
