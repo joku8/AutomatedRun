@@ -23,7 +23,7 @@ jobs:
       - run : mkdir /pysims/data/pysims
       - run : mkdir /testdir
       - run : mv -v /pysims/data/* /testdir
-      - run : mv -v /testdir/* /pysims/data/pysims/
+      - run : mv -v /testdir/* /pysims/data/pysims
       - name: Check out the latest data inputs
         uses: actions/checkout@main
         with:
