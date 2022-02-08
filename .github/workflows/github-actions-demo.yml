@@ -39,7 +39,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls -R /pysims/data
-
       - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Apply php-cs-fixer changes
