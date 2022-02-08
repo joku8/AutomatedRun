@@ -21,27 +21,27 @@ jobs:
           repository: FarmerAssist/ModelInputs
           path: Data
           
-      - name: Checkout the latest simulation
+      - name: 3-Checkout the latest simulation
         uses: actions/checkout@v2
         with:
           repository: FarmerAssist/Simulation
           path: Sims
           
-      - name: Checkout the latest pSIMS
+      - name: 4-Checkout the latest pSIMS
         uses: actions/checkout@v2
         with:
           repository: AgronomicForecastingLab/pysims
           token: ${{ secrets.GITHUBTOKEN }}
           path: pysims
      
-      - name: Run the model
+      - name: 5-Run the model
         run: |
           . /pysims/data/Sims/Champaign/test_apsim_TL.sh   
             
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Bot] Update all the things!"
-          repository: /pysims/data/Sims
+          repository: /pysims/data/
       
 
       
