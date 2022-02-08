@@ -13,19 +13,19 @@ jobs:
     steps:
       - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}, ${{ github.repository }}, ${{ job.status }}"
       
-      - name: Check out the latest data inputs
+      - name: Checkout the latest data inputs
         uses: actions/checkout@main
         with:
           repository: FarmerAssist/ModelInputs
           path: Data
           
-      - name: Check out the latest simulation
+      - name: Checkout the latest simulation
         uses: actions/checkout@v2
         with:
           repository: FarmerAssist/Simulation
           path: Sims
           
-      - name: Check out the latest pSIMS
+      - name: Checkout the latest pSIMS
         uses: actions/checkout@v2
         with:
           repository: AgronomicForecastingLab/pysims
