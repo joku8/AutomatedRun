@@ -17,11 +17,13 @@ jobs:
         uses: actions/checkout@main
         with:
           repository: FarmerAssist/ModelInputs
+          path: Date
           
       - name: Check out the latest simulation
         uses: actions/checkout@v2
         with:
           repository: FarmerAssist/Simulation
+          path: Sims
           
       - name: Check out the latest pSIMS
         uses: actions/checkout@v2
