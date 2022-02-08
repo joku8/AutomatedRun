@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@main
         with:
           repository: FarmerAssist/ModelInputs
+      - run : mv -v /pysims/data/* /pysims/data/pysims
       - name: List files in the repository
-        run : mv -v /pysims/data/* /pysims/data/pysims
         run: |
           ls /pysims/data
