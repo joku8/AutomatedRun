@@ -11,7 +11,7 @@ jobs:
         volumes:
             - ${{ github.workspace }}:/pysims/data
     steps:
-      - name: Force Install GIT latest
+      - name: 1-Force install git latest
         run: |
           apt-get install -y software-properties-common \
           && apt-get update \
@@ -23,8 +23,6 @@ jobs:
         with:
             ref: ${{ github.head_ref }}
             
-
-        
       - name: 2-Checkout the latest data inputs 
         uses: actions/checkout@main
         with:
@@ -48,7 +46,7 @@ jobs:
         run: |
           . /pysims/data/Sims/Champaign/test_apsim_TL.sh   
             
-      - name: 6- Commit the model outputs
+      - name: 6-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Bot] Update all the things!"
