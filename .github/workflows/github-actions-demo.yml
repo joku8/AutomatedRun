@@ -12,10 +12,10 @@ jobs:
             - ${{ github.workspace }}:/pysims/data
     steps:
       - uses: actions/checkout@v2
-      - name: install git
-        run:  apt-get install -y git
+      - name: 1-Install git
+        run:  apt-get update && sudo apt-get upgrade && apt-get install -y git
         
-      - name: Checkout the latest data inputs 
+      - name: 2-Checkout the latest data inputs 
         uses: actions/checkout@main
         with:
           repository: FarmerAssist/ModelInputs
