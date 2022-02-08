@@ -20,6 +20,11 @@ jobs:
         with:
           repository: AgronomicForecastingLab/pysims
           token: ${{ secrets.GITHUBTOKEN }}
+      - name: Check out the latest data inputs
+        uses: actions/checkout@main
+        with:
+          repository: FarmerAssist/ModelInputs
       - name: List files in the repository
+        run : mv -v /pysims/data/* /pysims/data/pysims
         run: |
           ls /pysims/data
