@@ -15,6 +15,11 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: echo "${{ github.repository }}, ${{ job.status }}"
+      - name: Check out the latest pSIMS
+        uses: actions/checkout@main
+        with:
+          repository: AgronomicForecastingLab/pysims
+          token: ${{ secrets.GITHUBTOKEN }}
       - name: List files in the repository
         run: |
-          ls /Apsim79
+          ls /pysims/data
