@@ -9,7 +9,7 @@ jobs:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_PASSWORD }}
         volumes:
-            - ${{ github.workspace }}:/mydatadir
+            - ${{ github.workspace }}:/pysims/data
     steps:
       - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}"
       - name: Check out repository code
@@ -17,4 +17,4 @@ jobs:
       - run: echo "${{ github.repository }}, ${{ job.status }}"
       - name: List files in the repository
         run: |
-          ls /mydatadir
+          ls /Apsim79
