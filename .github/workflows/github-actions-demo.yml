@@ -13,13 +13,11 @@ jobs:
     steps:
       - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}, ${{ github.repository }}, ${{ job.status }}"
       
-      - run: mkdir /testdir
-      - run: mkdir /pysims/data/pysims
-      - run: cd /testdir 
       - name: Check out the latest data inputs
         uses: actions/checkout@main
         with:
           repository: FarmerAssist/ModelInputs
+          repository: FarmerAssist/Simulation
           
       - name: Check out the latest simulation
         uses: actions/checkout@main
