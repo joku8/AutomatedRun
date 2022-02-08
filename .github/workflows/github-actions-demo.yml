@@ -11,6 +11,7 @@ jobs:
         volumes:
             - ${{ github.workspace }}:/pysims/data
     steps:
+      - uses: actions/checkout@v2
       - name: Checkout the latest data inputs 
         uses: actions/checkout@main
         with:
