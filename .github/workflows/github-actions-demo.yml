@@ -40,7 +40,7 @@ jobs:
       with: 
         commit: "Apply automatic changes"
         branch: "automatic-sync"
-        file_pattern: *.out    
+        file_pattern: "*.out"    
         
       - name: List files in the repository
         run: |
