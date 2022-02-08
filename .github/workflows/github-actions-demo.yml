@@ -12,6 +12,9 @@ jobs:
             - ${{ github.workspace }}:/pysims/data
     steps:
       - uses: actions/checkout@v2
+        with:
+            ref: ${{ github.head_ref }}
+           
       - name: 1-Install git
         run:  apt-get install -y git
         
