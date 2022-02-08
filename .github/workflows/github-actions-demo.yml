@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
         image: para2x/soilgrid:latest
+        volumes:
+            - ${{ github.workspace }}:/mydatadir
     steps:
       - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}"
       - name: Check out repository code
@@ -12,4 +14,4 @@ jobs:
       - run: echo "${{ github.repository }}, ${{ job.status }}"
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls /mydatadir
