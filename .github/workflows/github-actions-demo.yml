@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@main
         with:
           repository: FarmerAssist/ModelInputs
-          path: Date
+          path: Data
           
       - name: Check out the latest simulation
         uses: actions/checkout@v2
@@ -31,7 +31,10 @@ jobs:
           repository: AgronomicForecastingLab/pysims
           token: ${{ secrets.GITHUBTOKEN }}
           path: pysims
-          
+     
+      - name: Run the model
+        run: |
+          . /pysims/data/Sims/Champaign/test_apsim_TL.sh         
       - name: List files in the repository
         run: |
           ls -R /pysims/data
