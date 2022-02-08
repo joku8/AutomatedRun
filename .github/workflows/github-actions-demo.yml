@@ -35,9 +35,9 @@ jobs:
         run: |
           . /pysims/data/Sims/Champaign/test_apsim_TL.sh   
             
-      - name: List files in the repository
-        run: |
-          ls -R /pysims/data
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Bot] Update all the things!"
       
 
       
