@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     container:
-        image: node:10.16-jessie
+        image: para2x/soilgrid:latest
     steps:
       - run: echo "${{ github.event_name }}, ${{ runner.os }}, ${{ github.ref }}, ${{ github.repository }}"
       - name: Check out repository code
