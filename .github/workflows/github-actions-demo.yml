@@ -11,7 +11,7 @@ jobs:
         volumes:
             - ${{ github.workspace }}:/pysims/data
     steps:
-      - name: 1-Force install git latest
+      - name: 0-Force install git latest
         run: |
           apt-get install -y software-properties-common \
           && apt-get update \
@@ -19,7 +19,8 @@ jobs:
           && apt-get update \
           && apt-get install -y git
           
-      - uses: actions/checkout@v2
+      - name: 1-Checkout Checkout
+        uses: actions/checkout@v2
         with:
             ref: ${{ github.head_ref }}
             
