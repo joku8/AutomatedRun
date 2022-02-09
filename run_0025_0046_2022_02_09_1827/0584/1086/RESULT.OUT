@@ -1,0 +1,6 @@
+[Pass] /pysims/data/run_0025_0046_2022_02_09_1827/0584/1086/Generic1.sim:Generic1 [5sec]
+[Pass] Target: Apsim.exe [5sec]
+[Pass] Target: Apsim.exe [3sec]
+[Pass] /pysims/data/run_0025_0046_2022_02_09_1827/0584/1086/Generic2.sim:Generic2 [3sec]
+[Pass] /pysims/data/run_0025_0046_2022_02_09_1827/0584/1086/Generic.sim:Generic [2sec]
+[Pass] Target: Apsim.exe [2sec]

@@ -1,0 +1,859 @@
+     ###     ######     #####   #   #     #   
+    #   #    #     #   #        #   ##   ##   
+   #     #   #     #   #        #   ##   ##   
+   #######   ######     #####   #   # # # #   
+   #     #   #              #   #   #  #  #   
+   #     #   #         #####    #   #  #  #   
+                                              
+                                              
+ The Agricultural Production Systems Simulator
+             Copyright(c) APSRU               
+
+Version                = 7.10 r0
+Title                  = Generic2
+   Component                        "clock" = %apsim%/Model/Clock.so
+Paddock:
+   Component                   "outputfile" = %apsim%/Model/Report.so
+   Component                          "met" = %apsim%/Model/Input.so
+   Component                        "accum" = %apsim%/Model/Accum.so
+   Component                   "Operations" = %apsim%/Model/Operations.so
+   Component                   "fertiliser" = %apsim%/Model/Fertiliser.so
+   Component                        "Reset" = %apsim%/Model/Manager.so
+   Component          "Sow on a fixed date" = %apsim%/Model/Manager.so
+   Component        "Fertilise N at sowing" = %apsim%/Model/Manager.so
+   Component              "Harvesting rule" = %apsim%/Model/Manager.so
+   Component     "End crop on a fixed date" = %apsim%/Model/Manager.so
+   Component            "derived variables" = %apsim%/Model/Manager.so
+   Component                   "Soil Water" = %apsim%/Model/SoilWat.so
+   Component         "SurfaceOrganicMatter" = %apsim%/Model/SurfaceOM.so
+   Component                "Soil Nitrogen" = %apsim%/Model/SoilN.so
+   Component                        "Maize" = %apsim%/Model/Maize.so
+   Component                      "tracker" = %apsim%/Model/Tracker.so
+
+------- clock Initialisation --------------------------------------------------
+     Sequencer phases:
+        prepare
+        init_step
+        do_management
+        run_one_step
+        do_pasture_water
+        process
+        do_pasture_growth
+        do_stock
+        do_cashbook
+        post
+        end_step
+     Simulation start date =  1/01/2015
+     Simulation end date   = 31/12/2018
+     Time step =           = 1440 (mins)
+
+------- outputfile Initialisation ---------------------------------------------
+     Output frequency:
+        harvesting
+     Output variables:
+        dd/mm/yyyy as Date
+        planting_date
+        biomass
+        yield
+        lai_max
+        DaysAfterSowing
+        flowering_das
+        maturity_das
+        RainIn
+        Temp_year
+        TempIn
+        RadiationIn
+        IrrigationIn
+        WaterUse
+        actual_ET
+        N_uptake
+        FertiliserIn
+        NO3_leaching
+        N2Oemission_year
+        N2OemissionIn
+        CO2emission_year
+        CO2emissionIn
+
+     Output file = Generic2.out
+     Format = normal
+
+------- paddock.met Initialisation --------------------------------------------
+     Sparse data is not allowed
+     INPUT File name: met00000.met
+
+------- paddock.accum Initialisation ------------------------------------------
+     Initialising
+
+------- paddock.Operations Initialisation -------------------------------------
+     Operations Schedule
+     ===================
+
+------- paddock.Reset Initialisation ------------------------------------------
+     Manager rules:
+     
+     SECTION:- start_of_day
+              if (today = date('1-jan')) then
+     resetwater = 'no'
+     resetnitrogen  = 'no'
+     resetsurfaceom = 'no'
+     if (resetwater = 'yes') then
+         'soil water' reset
+     endif
+     if (resetnitrogen = 'yes') then
+         'soil nitrogen' reset
+     endif
+     if (resetsurfaceom = 'yes') then
+         'surfaceorganicmatter' reset
+     endif
+     act_mods reseting
+              endif
+     END of rules
+     
+
+------- paddock.Sow on a fixed date Initialisation ----------------------------
+     Manager rules:
+     
+     SECTION:- start_of_day
+             if (today = date('1-may') then
+       planting_date=dd_mmm_yyyy
+       maize sow plants =9, sowing_depth = 30, cultivar = b_105_biochar, row_spacing = 700, crop_class = plant
+              endif
+     END of rules
+     
+
+------- paddock.Fertilise N at sowing Initialisation --------------------------
+     Manager rules:
+     
+     SECTION:- maize.sowing
+             fertiliser apply amount = 100 (kg/ha), depth = 40 (mm), type = nh4no3
+     END of rules
+     
+
+------- paddock.Harvesting rule Initialisation --------------------------------
+     Manager rules:
+     
+     SECTION:- end_of_day
+     if maize.stagename = 'harvest_ripe'  or maize.plant_status = 'dead' then
+        maize harvest
+        maize end_crop
+     endif
+     END of rules
+     
+
+------- paddock.End crop on a fixed date Initialisation -----------------------
+     Manager rules:
+     
+     SECTION:- end_of_day
+             if (today = date('1-nov') then
+       maize  end_crop
+             endif
+     END of rules
+     
+
+------- paddock.derived variables Initialisation ------------------------------
+     Manager rules:
+     
+     SECTION:- start_of_day
+     aet = es + ep
+     t_average = (maxt + mint) * 0.5
+     soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
+     
+     SECTION:- end_of_day
+     END of rules
+     
+
+------- paddock.Soil Water Initialisation -------------------------------------
+     
+         - Reading constants
+     
+        - Reading Soil Property Parameters
+     
+        - Reading Soil Profile Parameters
+     Initial soilwater distributed using "sw" parameter.
+     
+     
+     
+                      Soil Profile Properties
+        ---------------------------------------------------------------------
+              Depth  Air_Dry  LL15   Dul    Sat     Sw     BD   Runoff  SWCON
+                mm     mm/mm  mm/mm  mm/mm  mm/mm  mm/mm  g/cc    wf
+        ---------------------------------------------------------------------
+            0.-   45.  0.079  0.158  0.299  0.431  0.229  1.381  0.346  0.300
+           45.-   91.  0.079  0.158  0.299  0.431  0.229  1.381  0.232  0.300
+           91.-  166.  0.079  0.158  0.299  0.427  0.229  1.393  0.219  0.300
+          166.-  289.  0.084  0.169  0.309  0.415  0.239  1.427  0.149  0.300
+          289.-  493.  0.090  0.179  0.309  0.391  0.244  1.500  0.054  0.300
+          493.-  829.  0.099  0.198  0.319  0.354  0.259  1.607  0.000  0.300
+          829.- 1383.  0.084  0.169  0.299  0.348  0.234  1.626  0.000  0.300
+         1383.- 2296.  0.065  0.129  0.278  0.369  0.204  1.563  0.000  0.300
+        ---------------------------------------------------------------------
+     
+     
+     
+                  Soil Water Holding Capacity
+          ---------------------------------------------------------
+              Depth    Unavailable Available  Max Avail.  Drainable
+                          (LL15)   (SW-LL15)  (DUL-LL15)  (SAT-DUL)
+                            mm        mm          mm         mm
+          ---------------------------------------------------------
+            0.-   45.       7.11       3.20       6.34       5.94
+           45.-   91.       7.27       3.27       6.49       6.07
+           91.-  166.      11.85       5.32      10.57       9.60
+          166.-  289.      20.79       8.61      17.22      13.04
+          289.-  493.      36.52      13.26      26.52      16.73
+          493.-  829.      66.53      20.50      40.66      11.76
+          829.- 1383.      93.63      36.01      72.02      27.15
+         1383.- 2296.     117.78      68.48     136.04      83.08
+          ---------------------------------------------------------
+               Totals     361.46     158.64     315.86     173.37
+          ---------------------------------------------------------
+     
+     
+     
+     
+     
+     
+                  Initial Soil Parameters
+          ---------------------------------------------------------
+                 Insoil        Salb     Dif_Con   Dif_Slope
+          ---------------------------------------------------------
+                   0.00        0.10       40.00       16.00
+          ---------------------------------------------------------
+     
+     
+     
+                  Runoff is predicted using scs curve number:
+                Cn2  Cn_Red  Cn_Cov   H_Eff_Depth
+                                           mm
+          ---------------------------------------------------------
+              75.00   20.00    0.80  450.00
+          ---------------------------------------------------------
+     
+     
+     
+           Using Ritchie evaporation model
+            Cuml evap (U):            6.00 (mm^0.5)
+            CONA:                     3.50 ()
+            Eo from priestly-taylor
+
+------- paddock.SurfaceOrganicMatter Initialisation ---------------------------
+     
+         - Reading constants
+     
+         - Reading parameters
+     
+     
+     
+                         Initial Surface Organic Matter Data
+         ----------------------------------------------------------------------
+            Name   Type        Dry matter   C        N        P    Cover  Standing_fr
+                                (kg/ha)  (kg/ha)  (kg/ha)  (kg/ha) (0-1)     (0-1)
+         ----------------------------------------------------------------------
+          OrganicMatMaize         1834.8   733.9     9.2     0.0   0.520     0.0
+         ----------------------------------------------------------------------
+     
+                      Effective Cover from Surface Materials =   0.5
+     
+
+------- paddock.Soil Nitrogen Initialisation ----------------------------------
+     
+        - Reading Parameters
+     
+        - Reading Constants
+     
+     
+     
+           TAV and AMP supplied externally
+     
+     
+     
+                      Soil Profile Properties
+          ------------------------------------------------
+           Layer    pH    OC     NO3     NH4    Urea
+                         (%) (kg/ha) (kg/ha) (kg/ha)
+          ------------------------------------------------
+             1     6.41  2.21    1.37    0.06    0.00
+             2     6.41  2.19    1.39    0.06    0.00
+             3     6.41  2.12    2.22    0.10    0.00
+             4     6.39  1.93    3.38    0.18    0.00
+             5     6.38  1.35    4.13    0.31    0.00
+             6     6.31  0.59    3.20    0.54    0.00
+             7     6.83  0.09    0.77    0.90    0.00
+             8     7.24  0.30    4.24    1.43    0.00
+          ------------------------------------------------
+           Totals               20.70    3.58    0.00
+          ------------------------------------------------
+     
+     
+     
+     
+     
+     
+                  Initial Soil Organic Matter Status
+          ---------------------------------------------------------
+           Layer      Hum-C   Hum-N  Biom-C  Biom-N   FOM-C   FOM-N
+                    (kg/ha) (kg/ha) (kg/ha) (kg/ha) (kg/ha) (kg/ha)
+          ---------------------------------------------------------
+             1      13429.2   926.2   317.2    39.7    42.9     1.0
+             2      13615.9   939.0   289.9    36.2    40.4     0.9
+             3      21787.2  1502.6   392.8    49.1    36.6     0.8
+             4      33354.8  2300.3   450.6    56.3    31.2     0.7
+             5      40935.1  2823.1   344.3    43.0    23.9     0.5
+             6      31954.1  2203.7    65.1     8.1    15.4     0.3
+             7       7651.5   527.7     5.3     0.7     7.5     0.2
+             8      42361.5  2921.5    21.0     2.6     2.3     0.1
+          ---------------------------------------------------------
+           Totals  205089.3 14144.1  1886.2   235.8   200.0     4.4
+          ---------------------------------------------------------
+
+------- paddock.tracker Initialisation ----------------------------------------
+     Tracker variables:
+        sum of irrigation on end_of_day from sowing to harvesting as IrrigationIn
+        sum of ep on end_of_day from sowing to harvesting as WaterUse
+        sum of AET on end_of_day from sowing to harvesting as actual_ET
+        sum of fertiliser on end_of_day from sowing to harvesting as FertiliserIn
+        sum of leach_no3 on end_of_day from sowing to harvesting as NO3_leaching
+        sum of radn on end_of_day from sowing to harvesting as RadiationIn
+        sum of n2o_atm() on end_of_day from sowing to harvesting as N2OemissionIn
+        sum of n2o_atm() on end_of_day from reported to now as N2Oemission_year
+        sum of soil_co2 on end_of_day from sowing to harvesting as CO2emissionIn
+        sum of soil_co2 on end_of_day from reported to now as CO2emission_year
+        average of T_average on end_of_day from sowing to harvesting as TempIn
+        average of T_average on end_of_day from reported to now as Temp_year
+        sum of rain on end_of_day from sowing to harvesting as RainIn
+        sum of rain on end_of_day from reported to now as Rain_year
+        sum of radn on end_of_day from reported to now as Radiation_year
+        average of nfact_photo on end_of_day from sowing to harvesting as N_stress_photo
+------- Start of simulation  --------------------------------------------------
+1 January 2015(Day of year=1), paddock.Reset: 
+     Manager creating a new local string variable : resetwater = no
+     Manager creating a new local string variable : resetnitrogen = no
+     Manager creating a new local string variable : resetsurfaceom = no
+1 January 2015(Day of year=1), paddock.derived variables: 
+     Manager creating a new local real variable : aet = 0.00000
+     Manager creating a new local real variable : t_average = -3.96650
+     Manager creating a new local real variable : soil_co2 = 0.00000
+1 May 2015(Day of year=121), paddock.Sow on a fixed date: 
+     Manager creating a new local string variable : planting_date = 01_May_2015
+     Manager sending message :- maize sow  plants = 9, sowing_depth = 30, cultivar = b_105_biochar, row_spacing = 700, crop_class = plant
+1 May 2015(Day of year=121), Maize: 
+     Sowing initiate
+     
+                 Crop Sowing Data
+         -------------------------------------------------------
+         Sowing   Depth  Plants Spacing Skiprow Cultivar
+         Day no     mm     m^2    mm     code     name  
+         -------------------------------------------------------
+            121    30.0     9.0   700    1.0     b_105_biochar
+         -------------------------------------------------------
+     
+      - reading constants for plant(maize) - b_105_biochar
+         tt_emerg_to_endjuv       =  250.00
+         tt_endjuv_to_init        =    0.00
+         tt_init_to_flower        =   50.00
+         tt_flower_to_maturity    =  832.00
+         tt_flag_to_flower        =    1.00
+         tt_flower_to_start_grain =  170.00
+         tt_maturity_to_ripe      =  100.00
+         ------------------------------------------------------
+     
+     
+                            Root Profile
+         ---------------------------------------------------
+              Layer       Kl           Lower    Exploration
+              Depth     Factor         Limit      Factor
+              (mm)         ()        (mm/mm)       (0-1)
+         ---------------------------------------------------
+              45.0     0.080          0.158       1.000
+              46.0     0.080          0.158       1.000
+              75.0     0.080          0.158       1.000
+             123.0     0.080          0.169       1.000
+             204.0     0.080          0.179       1.000
+             336.0     0.065          0.198       1.000
+             554.0     0.048          0.169       1.000
+             913.0     0.020          0.129       1.000
+         ---------------------------------------------------
+     
+1 May 2015(Day of year=121), paddock.Fertilise N at sowing: 
+     Manager sending message :- fertiliser apply  amount = 100 (kg/ha), depth = 40 (mm), type = nh4no3
+1 May 2015(Day of year=121), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+       100.00 of ammonium nitrate (nh4no3)
+                                         added at depth   40.00 (layer   1)
+2 May 2015(Day of year=122), Maize: 
+     Stage 2 Germination  DAS = 1
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW =   0.00
+5 May 2015(Day of year=125), Maize: 
+     Stage 3 Emergence  DAS = 4
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW =   5.58
+26 May 2015(Day of year=146), Maize: 
+     Stage 4 EndOfJuvenile  DAS = 25
+     		Biomass       =  48.84 		 LAI            =   0.60
+     		Stover N Conc =   1.39 		 Extractable SW =  94.14
+27 May 2015(Day of year=147), Maize: 
+     Stage 5 FloralInitiation  DAS = 26
+     		Biomass       =  55.20 		 LAI            =   0.71
+     		Stover N Conc =   1.64 		 Extractable SW =  94.65
+30 June 2015(Day of year=181), Maize: 
+     Stage 6 FlagLeaf  DAS = 60
+     		Biomass       = 783.10 		 LAI            =   5.04
+     		Stover N Conc =  11.18 		 Extractable SW = 296.06
+1 July 2015(Day of year=182), Maize: 
+     Stage 7 Flowering  DAS = 61
+     		Biomass       = 819.36 		 LAI            =   5.04
+     		Stover N Conc =  11.30 		 Extractable SW = 295.18
+13 July 2015(Day of year=194), Maize: 
+     Stage 8 StartGrainFill  DAS = 73
+     		Biomass       = 1123.16 		 LAI            =   4.66
+     		Stover N Conc =  12.37 		 Extractable SW = 378.55
+18 August 2015(Day of year=230), Maize: 
+     Stage 9 EndGrainFill  DAS = 109
+     		Biomass       = 1656.27 		 LAI            =   1.84
+     		Stover N Conc =   5.18 		 Extractable SW = 310.49
+20 August 2015(Day of year=232), Maize: 
+     Stage 10 Maturity  DAS = 111
+     		Biomass       = 1660.04 		 LAI            =   1.79
+     		Stover N Conc =   5.14 		 Extractable SW = 321.39
+28 August 2015(Day of year=240), Maize: 
+     Stage 11 HarvestRipe  DAS = 119
+     		Biomass       = 1662.29 		 LAI            =   1.77
+     		Stover N Conc =   5.13 		 Extractable SW = 316.20
+28 August 2015(Day of year=240), paddock.Harvesting rule: 
+     Manager sending message :- maize harvest
+     
+     Harvest
+     Flowering (DAS)       = 61 		 Maturity (DAS)          = 111
+     Flowering day         = 182 		 Maturity day            = 232
+     Maximum LAI           = 5.1 		 Number of leaves        = 18.4
+     Total above ground biomass    (kg/ha) = 16622.9
+     Green above ground biomass    (kg/ha) = 14937.0
+     Senesced above ground biomass (kg/ha) = 1685.9
+     Stover (kg/ha)        = 7566.7 	 Grain yield (kg/ha)     = 9056.2
+     Grain % water content = 15.5 		 Grain yield wet (kg/ha) = 10717.4
+     Weight 1000 grains(g) = 241.4 		 Grains/m^2              = 3751.2
+     Grains/head           = 416.8
+     Grain N percent    (%)     =      0.99 	 Grain N            (kg/ha) =    89.38
+     Total N content    (kg/ha) =    140.64 	 Senesced N content (kg/ha) =    33.71
+     Green N content    (kg/ha) =     22.52
+     
+     Average Stress Indices:                          Water Photo  Water Expan  N Photo
+        Emergence           to End of juvenile           1.0          1.0        1.0
+        End of juvenile     to Floral initiation         1.0          1.0        1.0
+        Floral initiation   to Flag leaf                 1.0          1.0        1.0
+        Flag leaf           to Flowering                 1.0          1.0        1.0
+        Flowering           to Start grain fill          0.9          0.9        0.8
+        Start grain fill    to End grain fill            1.0          1.0        0.5
+     
+     Crop harvested.
+        Organic matter removed from system:-      From Tops		From Roots
+                         DM (kg/ha) =               9056.20		    0.00
+                         N  (kg/ha) =                 89.38		    0.00
+     Manager sending message :- maize end_crop
+     Crop ended.
+     Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
+                         DM (kg/ha) =               7566.69		 3427.55
+                         N  (kg/ha) =                 51.26		    4.97
+                         P  (kg/ha) =                  0.00		    0.00
+1 November 2015(Day of year=305), paddock.End crop on a fixed date: 
+     Manager sending message :- maize end_crop
+1 May 2016(Day of year=122), paddock.Sow on a fixed date: 
+     Manager sending message :- maize sow  plants = 9, sowing_depth = 30, cultivar = b_105_biochar, row_spacing = 700, crop_class = plant
+1 May 2016(Day of year=122), Maize: 
+     Sowing initiate
+     
+                 Crop Sowing Data
+         -------------------------------------------------------
+         Sowing   Depth  Plants Spacing Skiprow Cultivar
+         Day no     mm     m^2    mm     code     name  
+         -------------------------------------------------------
+            122    30.0     9.0   700    1.0     b_105_biochar
+         -------------------------------------------------------
+     
+      - reading constants for plant(maize) - b_105_biochar
+         tt_emerg_to_endjuv       =  250.00
+         tt_endjuv_to_init        =    0.00
+         tt_init_to_flower        =   50.00
+         tt_flower_to_maturity    =  832.00
+         tt_flag_to_flower        =    1.00
+         tt_flower_to_start_grain =  170.00
+         tt_maturity_to_ripe      =  100.00
+         ------------------------------------------------------
+     
+     
+                            Root Profile
+         ---------------------------------------------------
+              Layer       Kl           Lower    Exploration
+              Depth     Factor         Limit      Factor
+              (mm)         ()        (mm/mm)       (0-1)
+         ---------------------------------------------------
+              45.0     0.080          0.158       1.000
+              46.0     0.080          0.158       1.000
+              75.0     0.080          0.158       1.000
+             123.0     0.080          0.169       1.000
+             204.0     0.080          0.179       1.000
+             336.0     0.065          0.198       1.000
+             554.0     0.048          0.169       1.000
+             913.0     0.020          0.129       1.000
+         ---------------------------------------------------
+     
+1 May 2016(Day of year=122), paddock.Fertilise N at sowing: 
+     Manager sending message :- fertiliser apply  amount = 100 (kg/ha), depth = 40 (mm), type = nh4no3
+1 May 2016(Day of year=122), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+       100.00 of ammonium nitrate (nh4no3)
+                                         added at depth   40.00 (layer   1)
+2 May 2016(Day of year=123), Maize: 
+     Stage 2 Germination  DAS = 1
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW = 311.87
+6 May 2016(Day of year=127), Maize: 
+     Stage 3 Emergence  DAS = 5
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW = 318.21
+28 May 2016(Day of year=149), Maize: 
+     Stage 4 EndOfJuvenile  DAS = 27
+     		Biomass       =  37.53 		 LAI            =   0.54
+     		Stover N Conc =   1.07 		 Extractable SW = 270.99
+29 May 2016(Day of year=150), Maize: 
+     Stage 5 FloralInitiation  DAS = 28
+     		Biomass       =  44.62 		 LAI            =   0.64
+     		Stover N Conc =   1.29 		 Extractable SW = 272.19
+27 June 2016(Day of year=179), Maize: 
+     Stage 6 FlagLeaf  DAS = 57
+     		Biomass       = 820.59 		 LAI            =   5.19
+     		Stover N Conc =   8.06 		 Extractable SW = 197.21
+28 June 2016(Day of year=180), Maize: 
+     Stage 7 Flowering  DAS = 58
+     		Biomass       = 855.76 		 LAI            =   5.27
+     		Stover N Conc =   8.20 		 Extractable SW = 194.07
+10 July 2016(Day of year=192), Maize: 
+     Stage 8 StartGrainFill  DAS = 70
+     		Biomass       = 1156.97 		 LAI            =   4.90
+     		Stover N Conc =   9.30 		 Extractable SW = 251.66
+14 August 2016(Day of year=227), Maize: 
+     Stage 9 EndGrainFill  DAS = 105
+     		Biomass       = 1567.39 		 LAI            =   2.04
+     		Stover N Conc =   4.77 		 Extractable SW = 265.68
+16 August 2016(Day of year=229), Maize: 
+     Stage 10 Maturity  DAS = 107
+     		Biomass       = 1570.39 		 LAI            =   2.00
+     		Stover N Conc =   4.75 		 Extractable SW = 299.84
+23 August 2016(Day of year=236), Maize: 
+     Stage 11 HarvestRipe  DAS = 114
+     		Biomass       = 1571.88 		 LAI            =   1.98
+     		Stover N Conc =   4.74 		 Extractable SW = 301.80
+23 August 2016(Day of year=236), paddock.Harvesting rule: 
+     Manager sending message :- maize harvest
+     
+     Harvest
+     Flowering (DAS)       = 58 		 Maturity (DAS)          = 107
+     Flowering day         = 180 		 Maturity day            = 229
+     Maximum LAI           = 5.3 		 Number of leaves        = 18.4
+     Total above ground biomass    (kg/ha) = 15718.8
+     Green above ground biomass    (kg/ha) = 13886.1
+     Senesced above ground biomass (kg/ha) = 1832.7
+     Stover (kg/ha)        = 7770.9 	 Grain yield (kg/ha)     = 7948.0
+     Grain % water content = 15.5 		 Grain yield wet (kg/ha) = 9405.9
+     Weight 1000 grains(g) = 198.8 		 Grains/m^2              = 3997.0
+     Grains/head           = 444.1
+     Grain N percent    (%)     =      0.81 	 Grain N            (kg/ha) =    64.20
+     Total N content    (kg/ha) =    111.60 	 Senesced N content (kg/ha) =    29.31
+     Green N content    (kg/ha) =     22.48
+     
+     Average Stress Indices:                          Water Photo  Water Expan  N Photo
+        Emergence           to End of juvenile           1.0          1.0        0.9
+        End of juvenile     to Floral initiation         1.0          1.0        0.9
+        Floral initiation   to Flag leaf                 1.0          1.0        0.9
+        Flag leaf           to Flowering                 1.0          1.0        1.0
+        Flowering           to Start grain fill          0.9          0.9        0.8
+        Start grain fill    to End grain fill            1.0          1.0        0.4
+     
+     Crop harvested.
+        Organic matter removed from system:-      From Tops		From Roots
+                         DM (kg/ha) =               7947.96		    0.00
+                         N  (kg/ha) =                 64.20		    0.00
+     Manager sending message :- maize end_crop
+     Crop ended.
+     Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
+                         DM (kg/ha) =               7770.86		 3516.37
+                         N  (kg/ha) =                 47.40		    4.38
+                         P  (kg/ha) =                  0.00		    0.00
+1 November 2016(Day of year=306), paddock.End crop on a fixed date: 
+     Manager sending message :- maize end_crop
+1 May 2017(Day of year=121), paddock.Sow on a fixed date: 
+     Manager sending message :- maize sow  plants = 9, sowing_depth = 30, cultivar = b_105_biochar, row_spacing = 700, crop_class = plant
+1 May 2017(Day of year=121), Maize: 
+     Sowing initiate
+     
+                 Crop Sowing Data
+         -------------------------------------------------------
+         Sowing   Depth  Plants Spacing Skiprow Cultivar
+         Day no     mm     m^2    mm     code     name  
+         -------------------------------------------------------
+            121    30.0     9.0   700    1.0     b_105_biochar
+         -------------------------------------------------------
+     
+      - reading constants for plant(maize) - b_105_biochar
+         tt_emerg_to_endjuv       =  250.00
+         tt_endjuv_to_init        =    0.00
+         tt_init_to_flower        =   50.00
+         tt_flower_to_maturity    =  832.00
+         tt_flag_to_flower        =    1.00
+         tt_flower_to_start_grain =  170.00
+         tt_maturity_to_ripe      =  100.00
+         ------------------------------------------------------
+     
+     
+                            Root Profile
+         ---------------------------------------------------
+              Layer       Kl           Lower    Exploration
+              Depth     Factor         Limit      Factor
+              (mm)         ()        (mm/mm)       (0-1)
+         ---------------------------------------------------
+              45.0     0.080          0.158       1.000
+              46.0     0.080          0.158       1.000
+              75.0     0.080          0.158       1.000
+             123.0     0.080          0.169       1.000
+             204.0     0.080          0.179       1.000
+             336.0     0.065          0.198       1.000
+             554.0     0.048          0.169       1.000
+             913.0     0.020          0.129       1.000
+         ---------------------------------------------------
+     
+1 May 2017(Day of year=121), paddock.Fertilise N at sowing: 
+     Manager sending message :- fertiliser apply  amount = 100 (kg/ha), depth = 40 (mm), type = nh4no3
+1 May 2017(Day of year=121), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+       100.00 of ammonium nitrate (nh4no3)
+                                         added at depth   40.00 (layer   1)
+2 May 2017(Day of year=122), Maize: 
+     Stage 2 Germination  DAS = 1
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW = 295.71
+7 May 2017(Day of year=127), Maize: 
+     Stage 3 Emergence  DAS = 6
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW = 281.91
+25 May 2017(Day of year=145): 
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+     Lower bound (    0.000000    ) exceeds upper bound (  -0.5852368E-11)
+             Variable is not checked
+     Component name: paddock.SurfaceOrganicMatter
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+27 May 2017(Day of year=147): 
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+     Lower bound (    0.000000    ) exceeds upper bound (  -0.8316715E-25)
+             Variable is not checked
+     Component name: paddock.SurfaceOrganicMatter
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+28 May 2017(Day of year=148), Maize: 
+     Stage 4 EndOfJuvenile  DAS = 27
+     		Biomass       =  46.01 		 LAI            =   0.58
+     		Stover N Conc =   1.29 		 Extractable SW = 248.76
+29 May 2017(Day of year=149), Maize: 
+     Stage 5 FloralInitiation  DAS = 28
+     		Biomass       =  54.36 		 LAI            =   0.66
+     		Stover N Conc =   1.51 		 Extractable SW = 248.53
+30 June 2017(Day of year=181), Maize: 
+     Stage 6 FlagLeaf  DAS = 60
+     		Biomass       = 933.55 		 LAI            =   5.43
+     		Stover N Conc =   8.73 		 Extractable SW = 190.47
+1 July 2017(Day of year=182), Maize: 
+     Stage 7 Flowering  DAS = 61
+     		Biomass       = 949.33 		 LAI            =   5.41
+     		Stover N Conc =   8.87 		 Extractable SW = 192.95
+10 July 2017(Day of year=191), Maize: 
+     Stage 8 StartGrainFill  DAS = 70
+     		Biomass       = 1248.57 		 LAI            =   5.13
+     		Stover N Conc =  10.03 		 Extractable SW = 178.24
+17 August 2017(Day of year=229), Maize: 
+     Stage 9 EndGrainFill  DAS = 108
+     		Biomass       = 1693.37 		 LAI            =   2.05
+     		Stover N Conc =   4.93 		 Extractable SW = 172.13
+20 August 2017(Day of year=232), Maize: 
+     Stage 10 Maturity  DAS = 111
+     		Biomass       = 1699.09 		 LAI            =   2.00
+     		Stover N Conc =   4.91 		 Extractable SW = 168.06
+27 August 2017(Day of year=239), Maize: 
+     Stage 11 HarvestRipe  DAS = 118
+     		Biomass       = 1700.87 		 LAI            =   1.99
+     		Stover N Conc =   4.90 		 Extractable SW = 186.99
+27 August 2017(Day of year=239), paddock.Harvesting rule: 
+     Manager sending message :- maize harvest
+     
+     Harvest
+     Flowering (DAS)       = 61 		 Maturity (DAS)          = 111
+     Flowering day         = 182 		 Maturity day            = 232
+     Maximum LAI           = 5.4 		 Number of leaves        = 18.4
+     Total above ground biomass    (kg/ha) = 17008.7
+     Green above ground biomass    (kg/ha) = 14962.1
+     Senesced above ground biomass (kg/ha) = 2046.6
+     Stover (kg/ha)        = 8559.3 	 Grain yield (kg/ha)     = 8449.4
+     Grain % water content = 15.5 		 Grain yield wet (kg/ha) = 9999.3
+     Weight 1000 grains(g) = 197.2 		 Grains/m^2              = 4284.2
+     Grains/head           = 476.0
+     Grain N percent    (%)     =      0.81 	 Grain N            (kg/ha) =    68.21
+     Total N content    (kg/ha) =    117.25 	 Senesced N content (kg/ha) =    30.03
+     Green N content    (kg/ha) =     23.84
+     
+     Average Stress Indices:                          Water Photo  Water Expan  N Photo
+        Emergence           to End of juvenile           1.0          1.0        1.0
+        End of juvenile     to Floral initiation         1.0          1.0        0.9
+        Floral initiation   to Flag leaf                 1.0          1.0        0.9
+        Flag leaf           to Flowering                 1.0          1.0        1.0
+        Flowering           to Start grain fill          0.8          0.8        0.8
+        Start grain fill    to End grain fill            1.0          1.0        0.4
+     
+     Crop harvested.
+        Organic matter removed from system:-      From Tops		From Roots
+                         DM (kg/ha) =               8449.38		    0.00
+                         N  (kg/ha) =                 68.21		    0.00
+     Manager sending message :- maize end_crop
+     Crop ended.
+     Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
+                         DM (kg/ha) =               8559.29		 3888.68
+                         N  (kg/ha) =                 49.04		    4.84
+                         P  (kg/ha) =                  0.00		    0.00
+1 November 2017(Day of year=305), paddock.End crop on a fixed date: 
+     Manager sending message :- maize end_crop
+1 May 2018(Day of year=121), paddock.Sow on a fixed date: 
+     Manager sending message :- maize sow  plants = 9, sowing_depth = 30, cultivar = b_105_biochar, row_spacing = 700, crop_class = plant
+1 May 2018(Day of year=121), Maize: 
+     Sowing initiate
+     
+                 Crop Sowing Data
+         -------------------------------------------------------
+         Sowing   Depth  Plants Spacing Skiprow Cultivar
+         Day no     mm     m^2    mm     code     name  
+         -------------------------------------------------------
+            121    30.0     9.0   700    1.0     b_105_biochar
+         -------------------------------------------------------
+     
+      - reading constants for plant(maize) - b_105_biochar
+         tt_emerg_to_endjuv       =  250.00
+         tt_endjuv_to_init        =    0.00
+         tt_init_to_flower        =   50.00
+         tt_flower_to_maturity    =  832.00
+         tt_flag_to_flower        =    1.00
+         tt_flower_to_start_grain =  170.00
+         tt_maturity_to_ripe      =  100.00
+         ------------------------------------------------------
+     
+     
+                            Root Profile
+         ---------------------------------------------------
+              Layer       Kl           Lower    Exploration
+              Depth     Factor         Limit      Factor
+              (mm)         ()        (mm/mm)       (0-1)
+         ---------------------------------------------------
+              45.0     0.080          0.158       1.000
+              46.0     0.080          0.158       1.000
+              75.0     0.080          0.158       1.000
+             123.0     0.080          0.169       1.000
+             204.0     0.080          0.179       1.000
+             336.0     0.065          0.198       1.000
+             554.0     0.048          0.169       1.000
+             913.0     0.020          0.129       1.000
+         ---------------------------------------------------
+     
+1 May 2018(Day of year=121), paddock.Fertilise N at sowing: 
+     Manager sending message :- fertiliser apply  amount = 100 (kg/ha), depth = 40 (mm), type = nh4no3
+1 May 2018(Day of year=121), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+       100.00 of ammonium nitrate (nh4no3)
+                                         added at depth   40.00 (layer   1)
+2 May 2018(Day of year=122), Maize: 
+     Stage 2 Germination  DAS = 1
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW = 181.29
+4 May 2018(Day of year=124), Maize: 
+     Stage 3 Emergence  DAS = 3
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW = 186.37
+22 May 2018(Day of year=142), Maize: 
+     Stage 4 EndOfJuvenile  DAS = 21
+     		Biomass       =  34.18 		 LAI            =   0.57
+     		Stover N Conc =   1.14 		 Extractable SW = 202.33
+23 May 2018(Day of year=143), Maize: 
+     Stage 5 FloralInitiation  DAS = 22
+     		Biomass       =  42.02 		 LAI            =   0.65
+     		Stover N Conc =   1.35 		 Extractable SW = 202.98
+21 June 2018(Day of year=172), Maize: 
+     Stage 6 FlagLeaf  DAS = 51
+     		Biomass       = 789.78 		 LAI            =   5.42
+     		Stover N Conc =   9.04 		 Extractable SW = 263.87
+22 June 2018(Day of year=173), Maize: 
+     Stage 7 Flowering  DAS = 52
+     		Biomass       = 811.91 		 LAI            =   5.35
+     		Stover N Conc =   9.13 		 Extractable SW = 281.53
+2 July 2018(Day of year=183), Maize: 
+     Stage 8 StartGrainFill  DAS = 62
+     		Biomass       = 1126.84 		 LAI            =   5.07
+     		Stover N Conc =  10.03 		 Extractable SW = 285.31
+8 August 2018(Day of year=220), Maize: 
+     Stage 9 EndGrainFill  DAS = 99
+     		Biomass       = 1626.34 		 LAI            =   1.99
+     		Stover N Conc =   4.95 		 Extractable SW = 233.49
+10 August 2018(Day of year=222), Maize: 
+     Stage 10 Maturity  DAS = 101
+     		Biomass       = 1630.83 		 LAI            =   1.94
+     		Stover N Conc =   4.92 		 Extractable SW = 230.31
+16 August 2018(Day of year=228), Maize: 
+     Stage 11 HarvestRipe  DAS = 107
+     		Biomass       = 1632.86 		 LAI            =   1.93
+     		Stover N Conc =   4.91 		 Extractable SW = 240.20
+16 August 2018(Day of year=228), paddock.Harvesting rule: 
+     Manager sending message :- maize harvest
+     
+     Harvest
+     Flowering (DAS)       = 52 		 Maturity (DAS)          = 101
+     Flowering day         = 173 		 Maturity day            = 222
+     Maximum LAI           = 5.4 		 Number of leaves        = 18.4
+     Total above ground biomass    (kg/ha) = 16328.6
+     Green above ground biomass    (kg/ha) = 14624.5
+     Senesced above ground biomass (kg/ha) = 1704.1
+     Stover (kg/ha)        = 7347.4 	 Grain yield (kg/ha)     = 8981.2
+     Grain % water content = 15.5 		 Grain yield wet (kg/ha) = 10628.7
+     Weight 1000 grains(g) = 213.1 		 Grains/m^2              = 4213.6
+     Grains/head           = 468.2
+     Grain N percent    (%)     =      0.81 	 Grain N            (kg/ha) =    72.44
+     Total N content    (kg/ha) =    121.58 	 Senesced N content (kg/ha) =    31.61
+     Green N content    (kg/ha) =     21.95
+     
+     Average Stress Indices:                          Water Photo  Water Expan  N Photo
+        Emergence           to End of juvenile           1.0          1.0        1.0
+        End of juvenile     to Floral initiation         0.9          0.9        0.9
+        Floral initiation   to Flag leaf                 1.0          1.0        0.9
+        Flag leaf           to Flowering                 1.0          1.0        1.0
+        Flowering           to Start grain fill          0.9          0.9        0.8
+        Start grain fill    to End grain fill            1.0          1.0        0.4
+     
+     Crop harvested.
+        Organic matter removed from system:-      From Tops		From Roots
+                         DM (kg/ha) =               8981.23		    0.00
+                         N  (kg/ha) =                 72.44		    0.00
+     Manager sending message :- maize end_crop
+     Crop ended.
+     Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
+                         DM (kg/ha) =               7347.37		 3557.06
+                         N  (kg/ha) =                 49.14		    4.42
+                         P  (kg/ha) =                  0.00		    0.00
+1 November 2018(Day of year=305), paddock.End crop on a fixed date: 
+     Manager sending message :- maize end_crop
+31 December 2018(Day of year=365), clock: 
+     Simulation is terminating due to end criteria being met.
+
