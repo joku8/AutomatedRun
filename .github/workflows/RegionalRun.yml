@@ -78,7 +78,7 @@ jobs:
       - name: 7- Pull upstream
         uses: actions/checkout@v2
         with:
-            ref: ${{ github.head_ref }}
+            ref: main
         
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -164,7 +164,7 @@ jobs:
       - name: 7- Pull upstream
         uses: actions/checkout@v2
         with:
-            ref: ${{ github.head_ref }}
+            ref: main
           
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
