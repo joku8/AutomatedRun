@@ -19,7 +19,7 @@ jobs:
           && apt-get update \
           && apt-get install -y git
           
-      - name: 1-Checkout Checkout
+      - name: 1-Checkout our current branch
         uses: actions/checkout@v2
         with:
             ref: ${{ github.head_ref }}
@@ -78,7 +78,7 @@ jobs:
       - name: 7- Pull upstream
         uses: actions/checkout@v2
         with:
-            ref: main
+            ref: ${{ github.head_ref }}
         
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -105,7 +105,7 @@ jobs:
           && apt-get update \
           && apt-get install -y git
           
-      - name: 1-Checkout Checkout
+      - name: 1-Checkout our current branch
         uses: actions/checkout@v2
         with:
             ref: ${{ github.head_ref }}
@@ -164,7 +164,7 @@ jobs:
       - name: 7- Pull upstream
         uses: actions/checkout@v2
         with:
-            ref: main
+            ref: ${{ github.head_ref }}
           
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
