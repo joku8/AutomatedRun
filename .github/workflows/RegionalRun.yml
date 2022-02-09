@@ -79,6 +79,7 @@ jobs:
         uses: actions/checkout@v2
         with:
             ref: main
+            clean: false
         
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -165,6 +166,7 @@ jobs:
         uses: actions/checkout@v2
         with:
             ref: main
+            clean: false
           
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
