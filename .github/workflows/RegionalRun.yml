@@ -61,7 +61,19 @@ jobs:
           
       - name: 6.3-Cleaning files sims
         run: |
-          find /pysims/data -name "*.sim" -type f -delete           
+          find /pysims/data -name "*.sim" -type f -delete  
+      
+      - name: 6.4-Cleaning files sums
+        run: |
+          find /pysims/data -name "*.sum" -type f -delete  
+      
+      - name: 6.5-Cleaning files met
+        run: |
+          find /pysims/data -name "*.met" -type f -delete  
+      
+      - name: 6.6-Cleaning files old
+        run: |
+          find /pysims/data -name "*.old" -type f -delete            
           
       - name: 7-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
