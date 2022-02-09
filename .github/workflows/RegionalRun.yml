@@ -45,7 +45,7 @@ jobs:
      
       - name: 5-Run the model
         run: |
-          . /pysims/data/Sims/Champaign/test_apsim_TL.sh 0025 0046   
+          . /pysims/data/Sims/Champaign/test_apsim_TL.sh '0025' '0046'   
           
       - name: 6.0-Cleaning dirs
         run: |
