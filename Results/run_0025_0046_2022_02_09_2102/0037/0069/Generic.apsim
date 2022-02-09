@@ -41,136 +41,136 @@
 					<Layer>
 						<Thickness units="mm">45.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.39935</BD>
-						<AirDry units="mm/mm">0.0915695</AirDry>
-						<LL15 units="mm/mm">0.183139</LL15>
-						<DUL units="mm/mm">0.36054</DUL>
-						<SAT units="mm/mm">0.44738</SAT>
+						<BD units="g/cc">1.39537</BD>
+						<AirDry units="mm/mm">0.0913095</AirDry>
+						<LL15 units="mm/mm">0.182619</LL15>
+						<DUL units="mm/mm">0.312629</DUL>
+						<SAT units="mm/mm">0.426101</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">46.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.49964</BD>
-						<AirDry units="mm/mm">0.0906935</AirDry>
-						<LL15 units="mm/mm">0.181387</LL15>
-						<DUL units="mm/mm">0.359736</DUL>
-						<SAT units="mm/mm">0.446111</SAT>
+						<BD units="g/cc">1.39972</BD>
+						<AirDry units="mm/mm">0.091399</AirDry>
+						<LL15 units="mm/mm">0.182798</LL15>
+						<DUL units="mm/mm">0.312763</DUL>
+						<SAT units="mm/mm">0.424622</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">75.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.48929</BD>
-						<AirDry units="mm/mm">0.0937485</AirDry>
-						<LL15 units="mm/mm">0.187497</LL15>
-						<DUL units="mm/mm">0.363895</DUL>
-						<SAT units="mm/mm">0.449595</SAT>
+						<BD units="g/cc">1.41091</BD>
+						<AirDry units="mm/mm">0.0915765</AirDry>
+						<LL15 units="mm/mm">0.183153</LL15>
+						<DUL units="mm/mm">0.311491</DUL>
+						<SAT units="mm/mm">0.420823</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">123.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.48929</BD>
-						<AirDry units="mm/mm">0.0937485</AirDry>
-						<LL15 units="mm/mm">0.187497</LL15>
-						<DUL units="mm/mm">0.363895</DUL>
-						<SAT units="mm/mm">0.449595</SAT>
+						<BD units="g/cc">1.44782</BD>
+						<AirDry units="mm/mm">0.092396</AirDry>
+						<LL15 units="mm/mm">0.184792</LL15>
+						<DUL units="mm/mm">0.310662</DUL>
+						<SAT units="mm/mm">0.408287</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">204.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.54621</BD>
-						<AirDry units="mm/mm">0.098037</AirDry>
-						<LL15 units="mm/mm">0.196074</LL15>
-						<DUL units="mm/mm">0.369304</DUL>
-						<SAT units="mm/mm">0.454629</SAT>
+						<BD units="g/cc">1.52945</BD>
+						<AirDry units="mm/mm">0.0922615</AirDry>
+						<LL15 units="mm/mm">0.184523</LL15>
+						<DUL units="mm/mm">0.304421</DUL>
+						<SAT units="mm/mm">0.381648</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">336.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.58431</BD>
-						<AirDry units="mm/mm">0.1008645</AirDry>
-						<LL15 units="mm/mm">0.201729</LL15>
-						<DUL units="mm/mm">0.370977</DUL>
-						<SAT units="mm/mm">0.456513</SAT>
+						<BD units="g/cc">1.6456</BD>
+						<AirDry units="mm/mm">0.0907515</AirDry>
+						<LL15 units="mm/mm">0.181503</LL15>
+						<DUL units="mm/mm">0.296593</DUL>
+						<SAT units="mm/mm">0.345177</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">554.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.61821</BD>
-						<AirDry units="mm/mm">0.1016325</AirDry>
-						<LL15 units="mm/mm">0.203265</LL15>
-						<DUL units="mm/mm">0.366449</DUL>
-						<SAT units="mm/mm">0.453292</SAT>
+						<BD units="g/cc">1.71359</BD>
+						<AirDry units="mm/mm">0.082503</AirDry>
+						<LL15 units="mm/mm">0.165006</LL15>
+						<DUL units="mm/mm">0.279406</DUL>
+						<SAT units="mm/mm">0.327346</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">913.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.61821</BD>
-						<AirDry units="mm/mm">0.1016325</AirDry>
-						<LL15 units="mm/mm">0.203265</LL15>
-						<DUL units="mm/mm">0.366449</DUL>
-						<SAT units="mm/mm">0.453292</SAT>
+						<BD units="g/cc">1.72907</BD>
+						<AirDry units="mm/mm">0.0728445</AirDry>
+						<LL15 units="mm/mm">0.145689</LL15>
+						<DUL units="mm/mm">0.265762</DUL>
+						<SAT units="mm/mm">0.32448</SAT>
 					</Layer>
 					<SoilCrop name="Maize">
 
 						<Layer>
 							<Thickness units="mm">45.0</Thickness>
-							<LL units="mm/mm">0.183139</LL>
+							<LL units="mm/mm">0.182619</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">46.0</Thickness>
-							<LL units="mm/mm">0.181387</LL>
+							<LL units="mm/mm">0.182798</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">75.0</Thickness>
-							<LL units="mm/mm">0.187497</LL>
+							<LL units="mm/mm">0.183153</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">123.0</Thickness>
-							<LL units="mm/mm">0.187497</LL>
+							<LL units="mm/mm">0.184792</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">204.0</Thickness>
-							<LL units="mm/mm">0.196074</LL>
+							<LL units="mm/mm">0.184523</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">336.0</Thickness>
-							<LL units="mm/mm">0.201729</LL>
+							<LL units="mm/mm">0.181503</LL>
 							<KL units="/day">0.0647333333333</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">554.0</Thickness>
-							<LL units="mm/mm">0.203265</LL>
+							<LL units="mm/mm">0.165006</LL>
 							<KL units="/day">0.0478</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">913.0</Thickness>
-							<LL units="mm/mm">0.203265</LL>
+							<LL units="mm/mm">0.145689</LL>
 							<KL units="/day">0.02</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
@@ -178,15 +178,15 @@
 				</Water>
 				<SoilWat>
 					<SummerCona>3.5</SummerCona>
-					<SummerU>6.0</SummerU>
+					<SummerU>5.94836</SummerU>
                <SummerDate>1-Nov</SummerDate>
 					<WinterCona>3.5</WinterCona>
-					<WinterU>6.0</WinterU>
+					<WinterU>5.94836</WinterU>
                <WinterDate>1-Apr</WinterDate>
 					<DiffusConst>40</DiffusConst>
 					<DiffusSlope>16</DiffusSlope>
-					<Salb>0.1</Salb>
-					<Cn2Bare>75.0</Cn2Bare>
+					<Salb>0.101291</Salb>
+					<Cn2Bare>74.7418</Cn2Bare>
 					<CnRed>20</CnRed>
 					<CnCov>0.8</CnCov>
 					<Slope>
@@ -263,56 +263,56 @@
 
 					<Layer>
 						<Thickness units="mm">45.0</Thickness>
-						<OC units="Total %"> 3.30841 </OC>
+						<OC units="Total %"> 2.82018 </OC>
 						<FBiom units="0-1">0.04</FBiom>
 						<FInert units="0-1">0.4</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">46.0</Thickness>
-						<OC units="Total %"> 2.26091 </OC>
+						<OC units="Total %"> 2.78404 </OC>
 						<FBiom units="0-1">0.0357142857143</FBiom>
 						<FInert units="0-1">0.4</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">75.0</Thickness>
-						<OC units="Total %"> 1.36297 </OC>
+						<OC units="Total %"> 2.67777 </OC>
 						<FBiom units="0-1">0.0314285714286</FBiom>
 						<FInert units="0-1">0.410666666667</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">123.0</Thickness>
-						<OC units="Total %"> 1.36297 </OC>
+						<OC units="Total %"> 2.36619 </OC>
 						<FBiom units="0-1">0.0271428571429</FBiom>
 						<FInert units="0-1">0.492666666667</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">204.0</Thickness>
-						<OC units="Total %"> 0.96683 </OC>
+						<OC units="Total %"> 1.52801 </OC>
 						<FBiom units="0-1">0.0228571428571</FBiom>
 						<FInert units="0-1">0.628666666667</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">336.0</Thickness>
-						<OC units="Total %"> 0.547233 </OC>
+						<OC units="Total %"> 0.467202 </OC>
 						<FBiom units="0-1">0.0185714285714</FBiom>
 						<FInert units="0-1">0.890833333333</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">554.0</Thickness>
-						<OC units="Total %"> 0.38605 </OC>
+						<OC units="Total %"> 0.205955 </OC>
 						<FBiom units="0-1">0.0142857142857</FBiom>
 						<FInert units="0-1">0.95</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">913.0</Thickness>
-						<OC units="Total %"> 0.38605 </OC>
+						<OC units="Total %"> 0.392368 </OC>
 						<FBiom units="0-1">0.01</FBiom>
 						<FInert units="0-1">0.95</FInert>
 					</Layer>
@@ -325,7 +325,7 @@
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.15331</PH>
+						<PH units="1:5 water">6.53338</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -347,7 +347,7 @@
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.11497</PH>
+						<PH units="1:5 water">6.53338</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -369,7 +369,7 @@
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.03037</PH>
+						<PH units="1:5 water">6.5179</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -391,7 +391,7 @@
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.03037</PH>
+						<PH units="1:5 water">6.49179</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -413,7 +413,7 @@
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">5.95606</PH>
+						<PH units="1:5 water">6.45831</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -435,7 +435,7 @@
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.06474</PH>
+						<PH units="1:5 water">6.56483</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -457,7 +457,7 @@
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.41226</PH>
+						<PH units="1:5 water">7.11945</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -479,7 +479,7 @@
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.41226</PH>
+						<PH units="1:5 water">7.54632</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -500,49 +500,49 @@
 
 					<Layer>
 						<Thickness units="mm">45.0</Thickness>
-						<NO3 units="ppm">3.30841</NO3>
+						<NO3 units="ppm">2.82018</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">46.0</Thickness>
-						<NO3 units="ppm">2.26091</NO3>
+						<NO3 units="ppm">2.78404</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">75.0</Thickness>
-						<NO3 units="ppm">1.36297</NO3>
+						<NO3 units="ppm">2.67777</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">123.0</Thickness>
-						<NO3 units="ppm">1.36297</NO3>
+						<NO3 units="ppm">2.36619</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">204.0</Thickness>
-						<NO3 units="ppm">0.96683</NO3>
+						<NO3 units="ppm">1.52801</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">336.0</Thickness>
-						<NO3 units="ppm">0.547233</NO3>
+						<NO3 units="ppm">0.467202</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">554.0</Thickness>
-						<NO3 units="ppm">0.38605</NO3>
+						<NO3 units="ppm">0.205955</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">913.0</Thickness>
-						<NO3 units="ppm">0.38605</NO3>
+						<NO3 units="ppm">0.392368</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 				</Sample>
@@ -817,136 +817,136 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 					<Layer>
 						<Thickness units="mm">45.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.35499</BD>
-						<AirDry units="mm/mm">0.066653</AirDry>
-						<LL15 units="mm/mm">0.133306</LL15>
-						<DUL units="mm/mm">0.277862</DUL>
-						<SAT units="mm/mm">0.439815</SAT>
+						<BD units="g/cc">1.39537</BD>
+						<AirDry units="mm/mm">0.0913095</AirDry>
+						<LL15 units="mm/mm">0.182619</LL15>
+						<DUL units="mm/mm">0.312629</DUL>
+						<SAT units="mm/mm">0.426101</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">46.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.35516</BD>
-						<AirDry units="mm/mm">0.0664545</AirDry>
-						<LL15 units="mm/mm">0.132909</LL15>
-						<DUL units="mm/mm">0.276222</DUL>
-						<SAT units="mm/mm">0.439757</SAT>
+						<BD units="g/cc">1.39972</BD>
+						<AirDry units="mm/mm">0.091399</AirDry>
+						<LL15 units="mm/mm">0.182798</LL15>
+						<DUL units="mm/mm">0.312763</DUL>
+						<SAT units="mm/mm">0.424622</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">75.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.35866</BD>
-						<AirDry units="mm/mm">0.065634</AirDry>
-						<LL15 units="mm/mm">0.131268</LL15>
-						<DUL units="mm/mm">0.273362</DUL>
-						<SAT units="mm/mm">0.43857</SAT>
+						<BD units="g/cc">1.41091</BD>
+						<AirDry units="mm/mm">0.0915765</AirDry>
+						<LL15 units="mm/mm">0.183153</LL15>
+						<DUL units="mm/mm">0.311491</DUL>
+						<SAT units="mm/mm">0.420823</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">123.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.37744</BD>
-						<AirDry units="mm/mm">0.067166</AirDry>
-						<LL15 units="mm/mm">0.134332</LL15>
-						<DUL units="mm/mm">0.275036</DUL>
-						<SAT units="mm/mm">0.432189</SAT>
+						<BD units="g/cc">1.44782</BD>
+						<AirDry units="mm/mm">0.092396</AirDry>
+						<LL15 units="mm/mm">0.184792</LL15>
+						<DUL units="mm/mm">0.310662</DUL>
+						<SAT units="mm/mm">0.408287</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">204.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.41151</BD>
-						<AirDry units="mm/mm">0.0642295</AirDry>
-						<LL15 units="mm/mm">0.128459</LL15>
-						<DUL units="mm/mm">0.272958</DUL>
-						<SAT units="mm/mm">0.42062</SAT>
+						<BD units="g/cc">1.52945</BD>
+						<AirDry units="mm/mm">0.0922615</AirDry>
+						<LL15 units="mm/mm">0.184523</LL15>
+						<DUL units="mm/mm">0.304421</DUL>
+						<SAT units="mm/mm">0.381648</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">336.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.46691</BD>
-						<AirDry units="mm/mm">0.065791</AirDry>
-						<LL15 units="mm/mm">0.131582</LL15>
-						<DUL units="mm/mm">0.273579</DUL>
-						<SAT units="mm/mm">0.401803</SAT>
+						<BD units="g/cc">1.6456</BD>
+						<AirDry units="mm/mm">0.0907515</AirDry>
+						<LL15 units="mm/mm">0.181503</LL15>
+						<DUL units="mm/mm">0.296593</DUL>
+						<SAT units="mm/mm">0.345177</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">554.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.55292</BD>
-						<AirDry units="mm/mm">0.0561025</AirDry>
-						<LL15 units="mm/mm">0.112205</LL15>
-						<DUL units="mm/mm">0.244227</DUL>
-						<SAT units="mm/mm">0.372593</SAT>
+						<BD units="g/cc">1.71359</BD>
+						<AirDry units="mm/mm">0.082503</AirDry>
+						<LL15 units="mm/mm">0.165006</LL15>
+						<DUL units="mm/mm">0.279406</DUL>
+						<SAT units="mm/mm">0.327346</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">913.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.61032</BD>
-						<AirDry units="mm/mm">0.0423164</AirDry>
-						<LL15 units="mm/mm">0.0846328</LL15>
-						<DUL units="mm/mm">0.229613</DUL>
-						<SAT units="mm/mm">0.3531</SAT>
+						<BD units="g/cc">1.72907</BD>
+						<AirDry units="mm/mm">0.0728445</AirDry>
+						<LL15 units="mm/mm">0.145689</LL15>
+						<DUL units="mm/mm">0.265762</DUL>
+						<SAT units="mm/mm">0.32448</SAT>
 					</Layer>
 					<SoilCrop name="Maize">
 
 						<Layer>
 							<Thickness units="mm">45.0</Thickness>
-							<LL units="mm/mm">0.133306</LL>
+							<LL units="mm/mm">0.182619</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">46.0</Thickness>
-							<LL units="mm/mm">0.132909</LL>
+							<LL units="mm/mm">0.182798</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">75.0</Thickness>
-							<LL units="mm/mm">0.131268</LL>
+							<LL units="mm/mm">0.183153</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">123.0</Thickness>
-							<LL units="mm/mm">0.134332</LL>
+							<LL units="mm/mm">0.184792</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">204.0</Thickness>
-							<LL units="mm/mm">0.128459</LL>
+							<LL units="mm/mm">0.184523</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">336.0</Thickness>
-							<LL units="mm/mm">0.131582</LL>
+							<LL units="mm/mm">0.181503</LL>
 							<KL units="/day">0.0647333333333</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">554.0</Thickness>
-							<LL units="mm/mm">0.112205</LL>
+							<LL units="mm/mm">0.165006</LL>
 							<KL units="/day">0.0478</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">913.0</Thickness>
-							<LL units="mm/mm">0.0846328</LL>
+							<LL units="mm/mm">0.145689</LL>
 							<KL units="/day">0.02</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
@@ -954,15 +954,15 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 				</Water>
 				<SoilWat>
 					<SummerCona>3.5</SummerCona>
-					<SummerU>6.0</SummerU>
+					<SummerU>5.94836</SummerU>
                <SummerDate>1-Nov</SummerDate>
 					<WinterCona>3.5</WinterCona>
-					<WinterU>6.0</WinterU>
+					<WinterU>5.94836</WinterU>
                <WinterDate>1-Apr</WinterDate>
 					<DiffusConst>40</DiffusConst>
 					<DiffusSlope>16</DiffusSlope>
-					<Salb>0.1</Salb>
-					<Cn2Bare>75.0</Cn2Bare>
+					<Salb>0.101291</Salb>
+					<Cn2Bare>74.7418</Cn2Bare>
 					<CnRed>20</CnRed>
 					<CnCov>0.8</CnCov>
 					<Slope>
@@ -1039,56 +1039,56 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 
 					<Layer>
 						<Thickness units="mm">45.0</Thickness>
-						<OC units="Total %"> 1.67504 </OC>
+						<OC units="Total %"> 2.82018 </OC>
 						<FBiom units="0-1">0.04</FBiom>
 						<FInert units="0-1">0.4</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">46.0</Thickness>
-						<OC units="Total %"> 1.65262 </OC>
+						<OC units="Total %"> 2.78404 </OC>
 						<FBiom units="0-1">0.0357142857143</FBiom>
 						<FInert units="0-1">0.4</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">75.0</Thickness>
-						<OC units="Total %"> 1.58288 </OC>
+						<OC units="Total %"> 2.67777 </OC>
 						<FBiom units="0-1">0.0314285714286</FBiom>
 						<FInert units="0-1">0.410666666667</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">123.0</Thickness>
-						<OC units="Total %"> 1.42598 </OC>
+						<OC units="Total %"> 2.36619 </OC>
 						<FBiom units="0-1">0.0271428571429</FBiom>
 						<FInert units="0-1">0.492666666667</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">204.0</Thickness>
-						<OC units="Total %"> 0.903632 </OC>
+						<OC units="Total %"> 1.52801 </OC>
 						<FBiom units="0-1">0.0228571428571</FBiom>
 						<FInert units="0-1">0.628666666667</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">336.0</Thickness>
-						<OC units="Total %"> 0.432435 </OC>
+						<OC units="Total %"> 0.467202 </OC>
 						<FBiom units="0-1">0.0185714285714</FBiom>
 						<FInert units="0-1">0.890833333333</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">554.0</Thickness>
-						<OC units="Total %"> 0.205148 </OC>
+						<OC units="Total %"> 0.205955 </OC>
 						<FBiom units="0-1">0.0142857142857</FBiom>
 						<FInert units="0-1">0.95</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">913.0</Thickness>
-						<OC units="Total %"> 0.292822 </OC>
+						<OC units="Total %"> 0.392368 </OC>
 						<FBiom units="0-1">0.01</FBiom>
 						<FInert units="0-1">0.95</FInert>
 					</Layer>
@@ -1101,7 +1101,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.45734</PH>
+						<PH units="1:5 water">6.53338</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1123,7 +1123,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.45734</PH>
+						<PH units="1:5 water">6.53338</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1145,7 +1145,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.43741</PH>
+						<PH units="1:5 water">6.5179</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1167,7 +1167,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.33746</PH>
+						<PH units="1:5 water">6.49179</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1189,7 +1189,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.18617</PH>
+						<PH units="1:5 water">6.45831</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1211,7 +1211,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.03907</PH>
+						<PH units="1:5 water">6.56483</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1233,7 +1233,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.36098</PH>
+						<PH units="1:5 water">7.11945</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1255,7 +1255,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.72344</PH>
+						<PH units="1:5 water">7.54632</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1276,49 +1276,49 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 
 					<Layer>
 						<Thickness units="mm">45.0</Thickness>
-						<NO3 units="ppm">1.67504</NO3>
+						<NO3 units="ppm">2.82018</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">46.0</Thickness>
-						<NO3 units="ppm">1.65262</NO3>
+						<NO3 units="ppm">2.78404</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">75.0</Thickness>
-						<NO3 units="ppm">1.58288</NO3>
+						<NO3 units="ppm">2.67777</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">123.0</Thickness>
-						<NO3 units="ppm">1.42598</NO3>
+						<NO3 units="ppm">2.36619</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">204.0</Thickness>
-						<NO3 units="ppm">0.903632</NO3>
+						<NO3 units="ppm">1.52801</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">336.0</Thickness>
-						<NO3 units="ppm">0.432435</NO3>
+						<NO3 units="ppm">0.467202</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">554.0</Thickness>
-						<NO3 units="ppm">0.205148</NO3>
+						<NO3 units="ppm">0.205955</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">913.0</Thickness>
-						<NO3 units="ppm">0.292822</NO3>
+						<NO3 units="ppm">0.392368</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 				</Sample>
@@ -1593,136 +1593,136 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 					<Layer>
 						<Thickness units="mm">45.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.39935</BD>
-						<AirDry units="mm/mm">0.0915695</AirDry>
-						<LL15 units="mm/mm">0.183139</LL15>
-						<DUL units="mm/mm">0.36054</DUL>
-						<SAT units="mm/mm">0.44738</SAT>
+						<BD units="g/cc">1.39537</BD>
+						<AirDry units="mm/mm">0.0913095</AirDry>
+						<LL15 units="mm/mm">0.182619</LL15>
+						<DUL units="mm/mm">0.312629</DUL>
+						<SAT units="mm/mm">0.426101</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">46.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.49964</BD>
-						<AirDry units="mm/mm">0.0906935</AirDry>
-						<LL15 units="mm/mm">0.181387</LL15>
-						<DUL units="mm/mm">0.359736</DUL>
-						<SAT units="mm/mm">0.446111</SAT>
+						<BD units="g/cc">1.39972</BD>
+						<AirDry units="mm/mm">0.091399</AirDry>
+						<LL15 units="mm/mm">0.182798</LL15>
+						<DUL units="mm/mm">0.312763</DUL>
+						<SAT units="mm/mm">0.424622</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">75.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.48929</BD>
-						<AirDry units="mm/mm">0.0937485</AirDry>
-						<LL15 units="mm/mm">0.187497</LL15>
-						<DUL units="mm/mm">0.363895</DUL>
-						<SAT units="mm/mm">0.449595</SAT>
+						<BD units="g/cc">1.41091</BD>
+						<AirDry units="mm/mm">0.0915765</AirDry>
+						<LL15 units="mm/mm">0.183153</LL15>
+						<DUL units="mm/mm">0.311491</DUL>
+						<SAT units="mm/mm">0.420823</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">123.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.48929</BD>
-						<AirDry units="mm/mm">0.0937485</AirDry>
-						<LL15 units="mm/mm">0.187497</LL15>
-						<DUL units="mm/mm">0.363895</DUL>
-						<SAT units="mm/mm">0.449595</SAT>
+						<BD units="g/cc">1.44782</BD>
+						<AirDry units="mm/mm">0.092396</AirDry>
+						<LL15 units="mm/mm">0.184792</LL15>
+						<DUL units="mm/mm">0.310662</DUL>
+						<SAT units="mm/mm">0.408287</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">204.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.54621</BD>
-						<AirDry units="mm/mm">0.098037</AirDry>
-						<LL15 units="mm/mm">0.196074</LL15>
-						<DUL units="mm/mm">0.369304</DUL>
-						<SAT units="mm/mm">0.454629</SAT>
+						<BD units="g/cc">1.52945</BD>
+						<AirDry units="mm/mm">0.0922615</AirDry>
+						<LL15 units="mm/mm">0.184523</LL15>
+						<DUL units="mm/mm">0.304421</DUL>
+						<SAT units="mm/mm">0.381648</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">336.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.58431</BD>
-						<AirDry units="mm/mm">0.1008645</AirDry>
-						<LL15 units="mm/mm">0.201729</LL15>
-						<DUL units="mm/mm">0.370977</DUL>
-						<SAT units="mm/mm">0.456513</SAT>
+						<BD units="g/cc">1.6456</BD>
+						<AirDry units="mm/mm">0.0907515</AirDry>
+						<LL15 units="mm/mm">0.181503</LL15>
+						<DUL units="mm/mm">0.296593</DUL>
+						<SAT units="mm/mm">0.345177</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">554.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.61821</BD>
-						<AirDry units="mm/mm">0.1016325</AirDry>
-						<LL15 units="mm/mm">0.203265</LL15>
-						<DUL units="mm/mm">0.366449</DUL>
-						<SAT units="mm/mm">0.453292</SAT>
+						<BD units="g/cc">1.71359</BD>
+						<AirDry units="mm/mm">0.082503</AirDry>
+						<LL15 units="mm/mm">0.165006</LL15>
+						<DUL units="mm/mm">0.279406</DUL>
+						<SAT units="mm/mm">0.327346</SAT>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">913.0</Thickness>
 						<KS units="mm/day" />
-						<BD units="g/cc">1.61821</BD>
-						<AirDry units="mm/mm">0.1016325</AirDry>
-						<LL15 units="mm/mm">0.203265</LL15>
-						<DUL units="mm/mm">0.366449</DUL>
-						<SAT units="mm/mm">0.453292</SAT>
+						<BD units="g/cc">1.72907</BD>
+						<AirDry units="mm/mm">0.0728445</AirDry>
+						<LL15 units="mm/mm">0.145689</LL15>
+						<DUL units="mm/mm">0.265762</DUL>
+						<SAT units="mm/mm">0.32448</SAT>
 					</Layer>
 					<SoilCrop name="Maize">
 
 						<Layer>
 							<Thickness units="mm">45.0</Thickness>
-							<LL units="mm/mm">0.183139</LL>
+							<LL units="mm/mm">0.182619</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">46.0</Thickness>
-							<LL units="mm/mm">0.181387</LL>
+							<LL units="mm/mm">0.182798</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">75.0</Thickness>
-							<LL units="mm/mm">0.187497</LL>
+							<LL units="mm/mm">0.183153</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">123.0</Thickness>
-							<LL units="mm/mm">0.187497</LL>
+							<LL units="mm/mm">0.184792</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">204.0</Thickness>
-							<LL units="mm/mm">0.196074</LL>
+							<LL units="mm/mm">0.184523</LL>
 							<KL units="/day">0.08</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">336.0</Thickness>
-							<LL units="mm/mm">0.201729</LL>
+							<LL units="mm/mm">0.181503</LL>
 							<KL units="/day">0.0647333333333</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">554.0</Thickness>
-							<LL units="mm/mm">0.203265</LL>
+							<LL units="mm/mm">0.165006</LL>
 							<KL units="/day">0.0478</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
 
 						<Layer>
 							<Thickness units="mm">913.0</Thickness>
-							<LL units="mm/mm">0.203265</LL>
+							<LL units="mm/mm">0.145689</LL>
 							<KL units="/day">0.02</KL>
 							<XF units="0-1">1</XF>
 						</Layer>
@@ -1730,15 +1730,15 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 				</Water>
 				<SoilWat>
 					<SummerCona>3.5</SummerCona>
-					<SummerU>6.0</SummerU>
+					<SummerU>5.94836</SummerU>
                <SummerDate>1-Nov</SummerDate>
 					<WinterCona>3.5</WinterCona>
-					<WinterU>6.0</WinterU>
+					<WinterU>5.94836</WinterU>
                <WinterDate>1-Apr</WinterDate>
 					<DiffusConst>40</DiffusConst>
 					<DiffusSlope>16</DiffusSlope>
-					<Salb>0.1</Salb>
-					<Cn2Bare>75.0</Cn2Bare>
+					<Salb>0.101291</Salb>
+					<Cn2Bare>74.7418</Cn2Bare>
 					<CnRed>20</CnRed>
 					<CnCov>0.8</CnCov>
 					<Slope>
@@ -1815,56 +1815,56 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 
 					<Layer>
 						<Thickness units="mm">45.0</Thickness>
-						<OC units="Total %"> 3.30841 </OC>
+						<OC units="Total %"> 2.82018 </OC>
 						<FBiom units="0-1">0.04</FBiom>
 						<FInert units="0-1">0.4</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">46.0</Thickness>
-						<OC units="Total %"> 2.26091 </OC>
+						<OC units="Total %"> 2.78404 </OC>
 						<FBiom units="0-1">0.0357142857143</FBiom>
 						<FInert units="0-1">0.4</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">75.0</Thickness>
-						<OC units="Total %"> 1.36297 </OC>
+						<OC units="Total %"> 2.67777 </OC>
 						<FBiom units="0-1">0.0314285714286</FBiom>
 						<FInert units="0-1">0.410666666667</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">123.0</Thickness>
-						<OC units="Total %"> 1.36297 </OC>
+						<OC units="Total %"> 2.36619 </OC>
 						<FBiom units="0-1">0.0271428571429</FBiom>
 						<FInert units="0-1">0.492666666667</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">204.0</Thickness>
-						<OC units="Total %"> 0.96683 </OC>
+						<OC units="Total %"> 1.52801 </OC>
 						<FBiom units="0-1">0.0228571428571</FBiom>
 						<FInert units="0-1">0.628666666667</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">336.0</Thickness>
-						<OC units="Total %"> 0.547233 </OC>
+						<OC units="Total %"> 0.467202 </OC>
 						<FBiom units="0-1">0.0185714285714</FBiom>
 						<FInert units="0-1">0.890833333333</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">554.0</Thickness>
-						<OC units="Total %"> 0.38605 </OC>
+						<OC units="Total %"> 0.205955 </OC>
 						<FBiom units="0-1">0.0142857142857</FBiom>
 						<FInert units="0-1">0.95</FInert>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">913.0</Thickness>
-						<OC units="Total %"> 0.38605 </OC>
+						<OC units="Total %"> 0.392368 </OC>
 						<FBiom units="0-1">0.01</FBiom>
 						<FInert units="0-1">0.95</FInert>
 					</Layer>
@@ -1877,7 +1877,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.15331</PH>
+						<PH units="1:5 water">6.53338</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1899,7 +1899,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.11497</PH>
+						<PH units="1:5 water">6.53338</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1921,7 +1921,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.03037</PH>
+						<PH units="1:5 water">6.5179</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1943,7 +1943,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.03037</PH>
+						<PH units="1:5 water">6.49179</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1965,7 +1965,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">5.95606</PH>
+						<PH units="1:5 water">6.45831</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -1987,7 +1987,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.06474</PH>
+						<PH units="1:5 water">6.56483</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -2009,7 +2009,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.41226</PH>
+						<PH units="1:5 water">7.11945</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -2031,7 +2031,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 						<Texture/>
 						<MunsellColour/>
 						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">6.41226</PH>
+						<PH units="1:5 water">7.54632</PH>
 						<CL units="mg/kg" />
 						<Boron units="Hot water mg/kg" />
 						<CEC units="cmol+/kg" />
@@ -2052,49 +2052,49 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 
 					<Layer>
 						<Thickness units="mm">45.0</Thickness>
-						<NO3 units="ppm">3.30841</NO3>
+						<NO3 units="ppm">2.82018</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">46.0</Thickness>
-						<NO3 units="ppm">2.26091</NO3>
+						<NO3 units="ppm">2.78404</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">75.0</Thickness>
-						<NO3 units="ppm">1.36297</NO3>
+						<NO3 units="ppm">2.67777</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">123.0</Thickness>
-						<NO3 units="ppm">1.36297</NO3>
+						<NO3 units="ppm">2.36619</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">204.0</Thickness>
-						<NO3 units="ppm">0.96683</NO3>
+						<NO3 units="ppm">1.52801</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">336.0</Thickness>
-						<NO3 units="ppm">0.547233</NO3>
+						<NO3 units="ppm">0.467202</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">554.0</Thickness>
-						<NO3 units="ppm">0.38605</NO3>
+						<NO3 units="ppm">0.205955</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 
 					<Layer>
 						<Thickness units="mm">913.0</Thickness>
-						<NO3 units="ppm">0.38605</NO3>
+						<NO3 units="ppm">0.392368</NO3>
 						<NH4 units="ppm">.1</NH4>
 					</Layer>
 				</Sample>
