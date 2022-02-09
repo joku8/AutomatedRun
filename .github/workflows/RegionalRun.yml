@@ -1,7 +1,7 @@
 name: Run Regional
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Tile00250046:
     runs-on: ubuntu-latest
     container:
         image: para2x/uiuc_custom_full_psims:3.0
