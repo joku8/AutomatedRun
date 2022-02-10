@@ -1,7 +1,7 @@
 name: Run Regional
 on: [push]
 jobs:
-  Tile00250045:
+  Tile00260045:
     runs-on: ubuntu-latest
     container:
         image: para2x/uiuc_custom_full_psims:3.0
@@ -29,7 +29,7 @@ jobs:
         with:
           repository: FarmerAssist/ModelInputs
           path: Data
-          ref: Tile00250045
+          ref: Tile00260045
           
       - name: 3-Checkout the latest simulation
         uses: actions/checkout@v2
@@ -46,7 +46,7 @@ jobs:
      
       - name: 5-Run the model
         run: |
-          bash /pysims/data/Sims/Champaign/test_apsim_TL.sh '0025' '0045'   
+          bash /pysims/data/Sims/Champaign/test_apsim_TL.sh '0026' '0045'   
           
       - name: 6.0-Cleaning dirs
         run: |
@@ -89,7 +89,7 @@ jobs:
           repository: /pysims/data/
           commit_options: '--no-verify --signoff'
  
-  Tile00250046:
+  Tile00260046:
     runs-on: ubuntu-latest
     container:
         image: para2x/uiuc_custom_full_psims:3.0
@@ -117,7 +117,7 @@ jobs:
         with:
           repository: FarmerAssist/ModelInputs
           path: Data
-          ref: Tile00250046
+          ref: Tile00260046
           
       - name: 3-Checkout the latest simulation
         uses: actions/checkout@v2
@@ -134,7 +134,7 @@ jobs:
      
       - name: 5-Run the model
         run: |
-          bash /pysims/data/Sims/Champaign/test_apsim_TL.sh '0025' '0046'   
+          bash /pysims/data/Sims/Champaign/test_apsim_TL.sh '0026' '0046'   
           
       - name: 6.0-Cleaning dirs
         run: |
@@ -177,7 +177,7 @@ jobs:
           repository: /pysims/data/
           commit_options: '--no-verify --signoff'
  
-  Tile00250047:
+  Tile00260047:
     runs-on: ubuntu-latest
     container:
         image: para2x/uiuc_custom_full_psims:3.0
@@ -205,7 +205,7 @@ jobs:
         with:
           repository: FarmerAssist/ModelInputs
           path: Data
-          ref: Tile00250047
+          ref: Tile00260047
           
       - name: 3-Checkout the latest simulation
         uses: actions/checkout@v2
@@ -222,7 +222,7 @@ jobs:
      
       - name: 5-Run the model
         run: |
-          bash /pysims/data/Sims/Champaign/test_apsim_TL.sh '0025' '0047'   
+          bash /pysims/data/Sims/Champaign/test_apsim_TL.sh '0026' '0047'   
           
       - name: 6.0-Cleaning dirs
         run: |
