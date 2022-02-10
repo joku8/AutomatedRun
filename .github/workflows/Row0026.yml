@@ -82,7 +82,7 @@ jobs:
       - name: 7- Pull upstream
         uses: actions/checkout@v2
         with:
-            fetch-depth: 0
+        fetch-depth: 0
       - run: |
         for commit in $(git rev-list ${{ github.base_ref }}..${{ github.head_ref }}); do
             git checkout $commit
