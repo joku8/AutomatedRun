@@ -82,11 +82,8 @@ jobs:
       - name: 7- Pull upstream
         uses: actions/checkout@v2
         with:
-        fetch-depth: 0
-      - run: |
-        for commit in $(git rev-list ${{ github.base_ref }}..${{ github.head_ref }}); do
-            git checkout $commit
-            echo "run test"
+            ref: main
+            clean: false
         
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -97,6 +94,7 @@ jobs:
  
   Tile00260046:
     runs-on: ubuntu-latest
+    needs: Tile00260045
     container:
         image: para2x/uiuc_custom_full_psims:3.0
         credentials:
@@ -176,12 +174,8 @@ jobs:
       - name: 7- Pull upstream
         uses: actions/checkout@v2
         with:
-            fetch-depth: 0
-      - run: |
-        for commit in $(git rev-list ${{ github.base_ref }}..${{ github.head_ref }}); do
-            git checkout $commit
-            echo "run test"
-        done
+            ref: main
+            clean: false
           
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -192,6 +186,7 @@ jobs:
  
   Tile00260047:
     runs-on: ubuntu-latest
+    needs: Tile00260045
     container:
         image: para2x/uiuc_custom_full_psims:3.0
         credentials:
@@ -271,12 +266,8 @@ jobs:
       - name: 7- Pull upstream
         uses: actions/checkout@v2
         with:
-            fetch-depth: 0
-      - run: |
-        for commit in $(git rev-list ${{ github.base_ref }}..${{ github.head_ref }}); do
-            git checkout $commit
-            echo "run test"
-        done
+            ref: main
+            clean: false
           
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4

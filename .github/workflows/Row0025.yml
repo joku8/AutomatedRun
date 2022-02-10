@@ -94,6 +94,7 @@ jobs:
  
   Tile00250046:
     runs-on: ubuntu-latest
+    needs: Tile00250045
     container:
         image: para2x/uiuc_custom_full_psims:3.0
         credentials:
@@ -185,6 +186,7 @@ jobs:
  
   Tile00250047:
     runs-on: ubuntu-latest
+    needs: Tile00250045
     container:
         image: para2x/uiuc_custom_full_psims:3.0
         credentials:
