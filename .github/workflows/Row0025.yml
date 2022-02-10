@@ -164,6 +164,9 @@ jobs:
         run: |
           find /pysims/data -name "*.old" -type f -delete            
 
+      - name: 7.0- sleep before pull
+        run : sleep 0.5
+        
       - name: 7- Pull upstream
         uses: actions/checkout@v2
         with:
@@ -252,6 +255,9 @@ jobs:
         run: |
           find /pysims/data -name "*.old" -type f -delete            
 
+      - name: 7.0- sleep before pull
+        run : sleep 2
+        
       - name: 7- Pull upstream
         uses: actions/checkout@v2
         with:
