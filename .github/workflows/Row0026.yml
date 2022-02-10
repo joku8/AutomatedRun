@@ -87,7 +87,6 @@ jobs:
         for commit in $(git rev-list ${{ github.base_ref }}..${{ github.head_ref }}); do
             git checkout $commit
             echo "run test"
-        done
         
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
