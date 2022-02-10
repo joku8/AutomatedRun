@@ -2,6 +2,8 @@
 
 ## To-do list
 1- Data Aggregation
+2- Update Met
+3- Fix soils
 
 
 ## Some resources:
