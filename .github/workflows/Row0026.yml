@@ -75,9 +75,6 @@ jobs:
       - name: 6.6-Cleaning files old apsim files
         run: |
           find /pysims/data -name "*.old" -type f -delete            
- 
-      - name: 7.0- sleep before pull
-        run : sleep 5
         
       - name: 7- Pull upstream
         uses: actions/checkout@v2
@@ -169,7 +166,7 @@ jobs:
           find /pysims/data -name "*.old" -type f -delete  
           
       - name: 7.0- sleep before pull
-        run : sleep 10
+        run : sleep 3
         
       - name: 7- Pull upstream
         uses: actions/checkout@v2
@@ -261,7 +258,7 @@ jobs:
           find /pysims/data -name "*.old" -type f -delete            
 
       - name: 7.0- sleep before pull
-        run : sleep 20
+        run : sleep 5
         
       - name: 7- Pull upstream
         uses: actions/checkout@v2
