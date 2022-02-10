@@ -1,7 +1,7 @@
 name: Run Regional
 on: [push]
 jobs:
-  Tile00250046:
+  Tile00250045:
     runs-on: ubuntu-latest
     container:
         image: para2x/uiuc_custom_full_psims:3.0
@@ -35,7 +35,95 @@ jobs:
         with:
           repository: FarmerAssist/Simulation
           path: Sims
+          ref: Tile00250045
+          
+      - name: 4-Checkout the latest pSIMS
+        uses: actions/checkout@v2
+        with:
+          repository: AgronomicForecastingLab/pysims
+          token: ${{ secrets.GITHUBTOKEN }}
+          path: pysims
+     
+      - name: 5-Run the model
+        run: |
+          bash /pysims/data/Sims/Champaign/test_apsim_TL.sh '0025' '0045'   
+          
+      - name: 6.0-Cleaning dirs
+        run: |
+          rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims  
+
+      - name: 6.1-Cleaning files nc
+        run: |
+          find /pysims/data -name "*.nc*" -type f -delete
+      
+      - name: 6.2-Cleaning files tar
+        run: |
+          find /pysims/data -name "*.tar*" -type f -delete 
+          
+      - name: 6.3-Cleaning files sims
+        run: |
+          find /pysims/data -name "*.sim" -type f -delete  
+      
+      - name: 6.4-Cleaning files sums
+        run: |
+          find /pysims/data -name "*.sum" -type f -delete  
+      
+      - name: 6.5-Cleaning files met
+        run: |
+          find /pysims/data -name "*.met" -type f -delete  
+      
+      - name: 6.6-Cleaning files old apsim files
+        run: |
+          find /pysims/data -name "*.old" -type f -delete            
+
+      - name: 7- Pull upstream
+        uses: actions/checkout@v2
+        with:
+            ref: main
+            clean: false
+        
+      - name: 8-Commit the model outputs
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "A new round of simulations"
+          repository: /pysims/data/
+          commit_options: '--no-verify --signoff'
+ 
+  Tile00250046:
+    runs-on: ubuntu-latest
+    container:
+        image: para2x/uiuc_custom_full_psims:3.0
+        credentials:
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        volumes:
+            - ${{ github.workspace }}:/pysims/data
+    steps:
+      - name: 0-Force install git latest
+        run: |
+          apt-get install -y software-properties-common \
+          && apt-get update \
+          && add-apt-repository -y ppa:git-core/ppa \
+          && apt-get update \
+          && apt-get install -y git
+          
+      - name: 1-Checkout our current branch
+        uses: actions/checkout@v2
+        with:
+            ref: ${{ github.head_ref }}
+            
+      - name: 2-Checkout the latest data inputs 
+        uses: actions/checkout@main
+        with:
+          repository: FarmerAssist/ModelInputs
+          path: Data
           ref: Tile00250046
+          
+      - name: 3-Checkout the latest simulation
+        uses: actions/checkout@v2
+        with:
+          repository: FarmerAssist/Simulation
+          path: Sims
           
       - name: 4-Checkout the latest pSIMS
         uses: actions/checkout@v2
@@ -81,7 +169,7 @@ jobs:
         with:
             ref: main
             clean: false
-        
+          
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -89,7 +177,7 @@ jobs:
           repository: /pysims/data/
           commit_options: '--no-verify --signoff'
  
-  Tile00260046:
+  Tile00250047:
     runs-on: ubuntu-latest
     container:
         image: para2x/uiuc_custom_full_psims:3.0
@@ -117,7 +205,7 @@ jobs:
         with:
           repository: FarmerAssist/ModelInputs
           path: Data
-          ref: Tile00260046
+          ref: Tile00250047
           
       - name: 3-Checkout the latest simulation
         uses: actions/checkout@v2
@@ -134,7 +222,7 @@ jobs:
      
       - name: 5-Run the model
         run: |
-          bash /pysims/data/Sims/Champaign/test_apsim_TL.sh '0026' '0046'   
+          bash /pysims/data/Sims/Champaign/test_apsim_TL.sh '0025' '0047'   
           
       - name: 6.0-Cleaning dirs
         run: |
@@ -175,8 +263,7 @@ jobs:
         with:
           commit_message: "A new round of simulations"
           repository: /pysims/data/
-          commit_options: '--no-verify --signoff'
-       
+          commit_options: '--no-verify --signoff' 
 
       
 
