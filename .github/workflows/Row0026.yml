@@ -19,7 +19,7 @@ jobs:
           && apt-get update \
           && apt-get install -y git
           
-      - name: 1-Checkout our current branch 
+      - name: 1-Checkout our current branch  
         uses: actions/checkout@v2
         with:
             ref: ${{ github.head_ref }}
