@@ -73,10 +73,6 @@ jobs:
         run: |
           find /pysims/data -name "*.sum" -type f -delete
 
-      - name: 6.5-Cleaning files met
-        run: |
-          find /pysims/data -name "*.met" -type f -delete
-
       - name: 6.6-Cleaning files old apsim files
         run: |
           find /pysims/data -name "*.old" -type f -delete
