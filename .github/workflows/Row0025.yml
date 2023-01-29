@@ -76,12 +76,6 @@ jobs:
         run: |
           find /pysims/data -name "*.old" -type f -delete
 
-      - name: 7- Pull upstream
-        uses: actions/checkout@v2
-        with:
-            ref: main
-            clean: false
-
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
