@@ -81,6 +81,9 @@ jobs:
         run: |
           find /pysims/data -name "*.old" -type f -delete
 
+      - name: Change Owner of Container Working Directory
+        run: chown root:root .
+
       - name: 8-Commit the model outputs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
