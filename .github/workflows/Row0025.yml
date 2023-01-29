@@ -19,6 +19,11 @@ jobs:
           && apt-get update \
           && apt-get install -y git
 
+      - name: 0.0-print info
+        run: |
+          echo ${{ github.workspace }}
+          echo $GITHUB_WORKSPACE
+
       - name: 1-Checkout our current branch
         uses: actions/checkout@v2
         with:
