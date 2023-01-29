@@ -87,3 +87,5 @@ jobs:
           commit_message: "A new round of simulations"
           repository: /pysims/data/
           commit_options: '--no-verify --signoff'
+          push_options: '--force'
+          status_options: '--untracked-files=no'
