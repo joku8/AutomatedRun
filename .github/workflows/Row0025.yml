@@ -64,7 +64,6 @@ jobs:
         run: |
           find /pysims/data -name "*.sim" -type f -delete
 
-
       - name: 6.6-Cleaning files old apsim files
         run: |
           find /pysims/data -name "*.old" -type f -delete
