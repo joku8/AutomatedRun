@@ -19,11 +19,6 @@ jobs:
           && apt-get update \
           && apt-get install -y git
 
-      - name: 0.0-print info
-        run: |
-          echo ${{ github.workspace }}
-          echo $GITHUB_WORKSPACE
-
       - name: 1-Checkout our current branch
         uses: actions/checkout@v2
         with:
@@ -69,9 +64,6 @@ jobs:
         run: |
           find /pysims/data -name "*.sim" -type f -delete
 
-      - name: 6.4-Cleaning files sums
-        run: |
-          find /pysims/data -name "*.sum" -type f -delete
 
       - name: 6.6-Cleaning files old apsim files
         run: |
