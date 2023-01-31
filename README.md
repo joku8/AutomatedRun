@@ -1,8 +1,6 @@
 # AutomatedRun
 
 ## To-do list
-- 1- Data Aggregation
-- 2-update the met (start and end date from experiment.json)
 - Check the campaign params
 
 ## Some resources:

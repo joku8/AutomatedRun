@@ -50,7 +50,7 @@ jobs:
 
       - name: 6.0-Cleaning dirs
         run: |
-          rm -r /pysims/data/Data /pysims/data/Sims
+          rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims
 
       - name: 6.1-Cleaning files nc
         run: |
@@ -66,11 +66,11 @@ jobs:
 
       - name: 6.4-Cleaning files sums
         run: |
-          find /pysims/data -name "*.sum" -type f -delete
+          find /pysims/data -name "*.spm" -type f -delete
 
       - name: 6.5-Cleaning files sums
         run: |
-          find /pysims/data -name "*.dll" -type f -delete 
+          find /pysims/data -name "*.dll" -type f -delete
 
       - name: 6.6-Cleaning files old apsim files
         run: |
@@ -89,7 +89,7 @@ jobs:
           status_options: '--untracked-files=no'
           skip_dirty_check: true
           create_branch: true
-          branch: Tile_00250045_noise
+          branch: Tile_00250045
 
   Tile00250046:
     runs-on: ubuntu-latest
@@ -145,7 +145,7 @@ jobs:
 
       - name: 6.0-Cleaning dirs
         run: |
-          rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims /pysims/data/inputs
+          rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims
 
       - name: 6.1-Cleaning files nc
         run: |
@@ -162,6 +162,10 @@ jobs:
       - name: 6.4-Cleaning files sums
         run: |
           find /pysims/data -name "*.sum" -type f -delete
+
+      - name: 6.5-Cleaning files sums
+        run: |
+          find /pysims/data -name "*.dll" -type f -delete
 
       - name: 6.6-Cleaning files old apsim files
         run: |
@@ -180,4 +184,4 @@ jobs:
           status_options: '--untracked-files=no'
           skip_dirty_check: true
           create_branch: true
-          branch: Tile_00250046_noise
+          branch: Tile_00250046
