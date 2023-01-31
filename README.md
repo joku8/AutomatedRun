@@ -1,10 +1,9 @@
 # AutomatedRun
 
 ## To-do list
-0- Clean the dir
-1- Data Aggregation
-2-update the met
-
+- 1- Data Aggregation
+- 2-update the met (start and end date from experiment.json)
+- Check the campaign params
 
 ## Some resources:
 - https://github.com/marketplace/actions/git-auto-commit

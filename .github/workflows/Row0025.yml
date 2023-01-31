@@ -50,7 +50,7 @@ jobs:
 
       - name: 6.0-Cleaning dirs
         run: |
-          rm -r /pysims/data/Data /pysims/data/Sims /pysims/data/pysims
+          rm -r /pysims/data/Data /pysims/data/Sims
 
       - name: 6.1-Cleaning files nc
         run: |
@@ -63,6 +63,14 @@ jobs:
       - name: 6.3-Cleaning files sims
         run: |
           find /pysims/data -name "*.sim" -type f -delete
+
+      - name: 6.4-Cleaning files sums
+        run: |
+          find /pysims/data -name "*.sum" -type f -delete
+
+      - name: 6.5-Cleaning files sums
+        run: |
+          find /pysims/data -name "*.dll" -type f -delete 
 
       - name: 6.6-Cleaning files old apsim files
         run: |
