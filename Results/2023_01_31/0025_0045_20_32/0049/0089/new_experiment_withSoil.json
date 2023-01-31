@@ -1,0 +1,864 @@
+{
+  "experiments": [
+    {
+      "reset": {
+        "date": "1-jan",
+        "water": "no",
+        "surfaceOM": "no",
+        "nitrogen": "no"
+      },
+      "output_variables": [
+        {
+          "name": "dd/mm/yyyy as Date"
+        },
+        {
+          "name": "planting_date"
+        },
+        {
+          "name": "biomass"
+        },
+        {
+          "name": "yield"
+        },
+        {
+          "name": "lai_max"
+        },
+        {
+          "name": "DaysAfterSowing"
+        },
+        {
+          "name": "flowering_das"
+        },
+        {
+          "name": "maturity_das"
+        },
+        {
+          "name": "RainIn"
+        },
+        {
+          "name": "Temp_year"
+        },
+        {
+          "name": "TempIn"
+        },
+        {
+          "name": "RadiationIn"
+        },
+        {
+          "name": "IrrigationIn"
+        },
+        {
+          "name": "WaterUse"
+        },
+        {
+          "name": "actual_ET"
+        },
+        {
+          "name": "N_uptake"
+        },
+        {
+          "name": "FertiliserIn"
+        },
+        {
+          "name": "NO3_leaching"
+        },
+        {
+          "name": "N2Oemission_year"
+        },
+        {
+          "name": "N2OemissionIn"
+        },
+        {
+          "name": "CO2emission_year"
+        },
+        {
+          "name": "CO2emissionIn"
+        }
+      ],
+      "irrigation": {
+        "default_cl_conc": "0.0",
+        "default_nh4_conc": "0.0",
+        "default_no3_conc": "0.0",
+        "allocation_limits": "off",
+        "allocation": "10",
+        "efficiency": "1",
+        "asw_depth": "600",
+        "crit_fr_asw": "0.75",
+        "automatic_irrigation": "off"
+      },
+      "Soilprofile": 0,
+      "log": "",
+      "end_date": "31/12/2018",
+      "initial_condition": {
+        "icrip": "100",
+        "standing_fraction": "0",
+        "icrn": ".5",
+        "icrdp": "30",
+        "water_fraction_full": "0.5",
+        "icrag": "500",
+        "soilLayer": [
+          {
+            "icno3": ".1",
+            "icbl": "5",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "15",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "30",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "100",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "200",
+            "icnh4": ".1"
+          }
+        ],
+        "icnd": "0",
+        "icdat": "20050101",
+        "icrp": "0",
+        "icrze": "1",
+        "icrz#": "1",
+        "icrt": "300"
+      },
+      "planting": {
+        "potKernelWt": "300",
+        "est_days_endjuv_to_init": "20",
+        "photoperiod_crit2": "24.0",
+        "photoperiod_crit1": "12.5",
+        "head_grain_no_max": "800",
+        "tt_flag_to_flower": "10",
+        "tt_flower_to_maturity": "680",
+        "row_spacing": "700",
+        "tt_maturity_to_ripe": "1",
+        "photoperiod_slope": "0",
+        "tt_emerg_to_endjuv": "431.447",
+        "x_stem_wt": "0    80",
+        "sowing_density": "9",
+        "tt_endjuv_to_init": "0.0",
+        "rue": "1.9",
+        "tt_flower_to_start_grain": "170",
+        "cultivar": "B_105_biochar",
+        "y_height": "0  2000",
+        "grain_gth_rate": "9.5",
+        "pdate": "1-may",
+        "depth": "30",
+        "edate": "1-nov"
+      },
+      "crop_name": "Maize",
+      "reporting_frequency": "harvesting",
+      "weather": {
+        "file": "met00004.met"
+      },
+      "fertilizer": {
+        "automatic_fertilizer": "off",
+        "subsequent_amount": "100",
+        "days_after_sowing": "45",
+        "initial_amount": "100",
+        "depth": "40",
+        "fert_criteria": "100",
+        "fert_critical": "90",
+        "type_auto": "NO3_N",
+        "type": "NH4NO3"
+      },
+      "start_date": "01/01/2005"
+    },
+    {
+      "reset": {
+        "date": "1-jan",
+        "water": "no",
+        "surfaceOM": "no",
+        "nitrogen": "no"
+      },
+      "output_variables": [
+        {
+          "name": "dd/mm/yyyy as Date"
+        },
+        {
+          "name": "planting_date"
+        },
+        {
+          "name": "biomass"
+        },
+        {
+          "name": "yield"
+        },
+        {
+          "name": "lai_max"
+        },
+        {
+          "name": "DaysAfterSowing"
+        },
+        {
+          "name": "flowering_das"
+        },
+        {
+          "name": "maturity_das"
+        },
+        {
+          "name": "RainIn"
+        },
+        {
+          "name": "Temp_year"
+        },
+        {
+          "name": "TempIn"
+        },
+        {
+          "name": "RadiationIn"
+        },
+        {
+          "name": "IrrigationIn"
+        },
+        {
+          "name": "WaterUse"
+        },
+        {
+          "name": "actual_ET"
+        },
+        {
+          "name": "N_uptake"
+        },
+        {
+          "name": "FertiliserIn"
+        },
+        {
+          "name": "NO3_leaching"
+        },
+        {
+          "name": "N2Oemission_year"
+        },
+        {
+          "name": "N2OemissionIn"
+        },
+        {
+          "name": "CO2emission_year"
+        },
+        {
+          "name": "CO2emissionIn"
+        }
+      ],
+      "irrigation": {
+        "default_cl_conc": "0.0",
+        "default_nh4_conc": "0.0",
+        "default_no3_conc": "0.0",
+        "allocation_limits": "off",
+        "allocation": "10",
+        "efficiency": "1",
+        "asw_depth": "600",
+        "crit_fr_asw": "0.75",
+        "automatic_irrigation": "off"
+      },
+      "Soilprofile": 1,
+      "log": "",
+      "end_date": "31/12/2018",
+      "initial_condition": {
+        "icrip": "100",
+        "standing_fraction": "0",
+        "icrn": ".5",
+        "icrdp": "30",
+        "water_fraction_full": "0.5",
+        "icrag": "500",
+        "soilLayer": [
+          {
+            "icno3": ".1",
+            "icbl": "5",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "15",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "30",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "100",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "200",
+            "icnh4": ".1"
+          }
+        ],
+        "icnd": "0",
+        "icdat": "20050101",
+        "icrp": "0",
+        "icrze": "1",
+        "icrz#": "1",
+        "icrt": "300"
+      },
+      "planting": {
+        "potKernelWt": "300",
+        "est_days_endjuv_to_init": "20",
+        "photoperiod_crit2": "24.0",
+        "photoperiod_crit1": "12.5",
+        "head_grain_no_max": "800",
+        "tt_flag_to_flower": "10",
+        "tt_flower_to_maturity": "680",
+        "row_spacing": "700",
+        "tt_maturity_to_ripe": "1",
+        "photoperiod_slope": "0",
+        "tt_emerg_to_endjuv": "417.153",
+        "x_stem_wt": "0    80",
+        "sowing_density": "9",
+        "tt_endjuv_to_init": "0.0",
+        "rue": "1.9",
+        "tt_flower_to_start_grain": "170",
+        "cultivar": "B_105_biochar",
+        "y_height": "0  2000",
+        "grain_gth_rate": "9.5",
+        "pdate": "1-may",
+        "depth": "30",
+        "edate": "1-nov"
+      },
+      "crop_name": "Maize",
+      "reporting_frequency": "harvesting",
+      "weather": {
+        "file": "met00004.met"
+      },
+      "fertilizer": {
+        "automatic_fertilizer": "off",
+        "subsequent_amount": "100",
+        "days_after_sowing": "45",
+        "initial_amount": "100",
+        "depth": "40",
+        "fert_criteria": "100",
+        "fert_critical": "90",
+        "type_auto": "NO3_N",
+        "type": "NH4NO3"
+      },
+      "start_date": "01/01/2005"
+    },
+    {
+      "reset": {
+        "date": "1-jan",
+        "water": "no",
+        "surfaceOM": "no",
+        "nitrogen": "no"
+      },
+      "output_variables": [
+        {
+          "name": "dd/mm/yyyy as Date"
+        },
+        {
+          "name": "planting_date"
+        },
+        {
+          "name": "biomass"
+        },
+        {
+          "name": "yield"
+        },
+        {
+          "name": "lai_max"
+        },
+        {
+          "name": "DaysAfterSowing"
+        },
+        {
+          "name": "flowering_das"
+        },
+        {
+          "name": "maturity_das"
+        },
+        {
+          "name": "RainIn"
+        },
+        {
+          "name": "Temp_year"
+        },
+        {
+          "name": "TempIn"
+        },
+        {
+          "name": "RadiationIn"
+        },
+        {
+          "name": "IrrigationIn"
+        },
+        {
+          "name": "WaterUse"
+        },
+        {
+          "name": "actual_ET"
+        },
+        {
+          "name": "N_uptake"
+        },
+        {
+          "name": "FertiliserIn"
+        },
+        {
+          "name": "NO3_leaching"
+        },
+        {
+          "name": "N2Oemission_year"
+        },
+        {
+          "name": "N2OemissionIn"
+        },
+        {
+          "name": "CO2emission_year"
+        },
+        {
+          "name": "CO2emissionIn"
+        }
+      ],
+      "irrigation": {
+        "default_cl_conc": "0.0",
+        "default_nh4_conc": "0.0",
+        "default_no3_conc": "0.0",
+        "allocation_limits": "off",
+        "allocation": "10",
+        "efficiency": "1",
+        "asw_depth": "600",
+        "crit_fr_asw": "0.75",
+        "automatic_irrigation": "off"
+      },
+      "Soilprofile": 1,
+      "log": "",
+      "end_date": "31/12/2018",
+      "initial_condition": {
+        "icrip": "100",
+        "standing_fraction": "0",
+        "icrn": ".5",
+        "icrdp": "30",
+        "water_fraction_full": "0.5",
+        "icrag": "500",
+        "soilLayer": [
+          {
+            "icno3": ".1",
+            "icbl": "5",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "15",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "30",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "100",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "200",
+            "icnh4": ".1"
+          }
+        ],
+        "icnd": "0",
+        "icdat": "20050101",
+        "icrp": "0",
+        "icrze": "1",
+        "icrz#": "1",
+        "icrt": "300"
+      },
+      "planting": {
+        "potKernelWt": "300",
+        "est_days_endjuv_to_init": "20",
+        "photoperiod_crit2": "24.0",
+        "photoperiod_crit1": "12.5",
+        "head_grain_no_max": "800",
+        "tt_flag_to_flower": "10",
+        "tt_flower_to_maturity": "680",
+        "row_spacing": "700",
+        "tt_maturity_to_ripe": "1",
+        "photoperiod_slope": "0",
+        "tt_emerg_to_endjuv": "420.927",
+        "x_stem_wt": "0    80",
+        "sowing_density": "9",
+        "tt_endjuv_to_init": "0.0",
+        "rue": "1.9",
+        "tt_flower_to_start_grain": "170",
+        "cultivar": "B_105_biochar",
+        "y_height": "0  2000",
+        "grain_gth_rate": "9.5",
+        "pdate": "1-may",
+        "depth": "30",
+        "edate": "1-nov"
+      },
+      "crop_name": "Maize",
+      "reporting_frequency": "harvesting",
+      "weather": {
+        "file": "met00007.met"
+      },
+      "fertilizer": {
+        "automatic_fertilizer": "off",
+        "subsequent_amount": "100",
+        "days_after_sowing": "45",
+        "initial_amount": "100",
+        "depth": "40",
+        "fert_criteria": "100",
+        "fert_critical": "90",
+        "type_auto": "NO3_N",
+        "type": "NH4NO3"
+      },
+      "start_date": "01/01/2005"
+    },
+    {
+      "reset": {
+        "date": "1-jan",
+        "water": "no",
+        "surfaceOM": "no",
+        "nitrogen": "no"
+      },
+      "output_variables": [
+        {
+          "name": "dd/mm/yyyy as Date"
+        },
+        {
+          "name": "planting_date"
+        },
+        {
+          "name": "biomass"
+        },
+        {
+          "name": "yield"
+        },
+        {
+          "name": "lai_max"
+        },
+        {
+          "name": "DaysAfterSowing"
+        },
+        {
+          "name": "flowering_das"
+        },
+        {
+          "name": "maturity_das"
+        },
+        {
+          "name": "RainIn"
+        },
+        {
+          "name": "Temp_year"
+        },
+        {
+          "name": "TempIn"
+        },
+        {
+          "name": "RadiationIn"
+        },
+        {
+          "name": "IrrigationIn"
+        },
+        {
+          "name": "WaterUse"
+        },
+        {
+          "name": "actual_ET"
+        },
+        {
+          "name": "N_uptake"
+        },
+        {
+          "name": "FertiliserIn"
+        },
+        {
+          "name": "NO3_leaching"
+        },
+        {
+          "name": "N2Oemission_year"
+        },
+        {
+          "name": "N2OemissionIn"
+        },
+        {
+          "name": "CO2emission_year"
+        },
+        {
+          "name": "CO2emissionIn"
+        }
+      ],
+      "irrigation": {
+        "default_cl_conc": "0.0",
+        "default_nh4_conc": "0.0",
+        "default_no3_conc": "0.0",
+        "allocation_limits": "off",
+        "allocation": "10",
+        "efficiency": "1",
+        "asw_depth": "600",
+        "crit_fr_asw": "0.75",
+        "automatic_irrigation": "off"
+      },
+      "Soilprofile": 1,
+      "log": "",
+      "end_date": "31/12/2018",
+      "initial_condition": {
+        "icrip": "100",
+        "standing_fraction": "0",
+        "icrn": ".5",
+        "icrdp": "30",
+        "water_fraction_full": "0.5",
+        "icrag": "500",
+        "soilLayer": [
+          {
+            "icno3": ".1",
+            "icbl": "5",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "15",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "30",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "100",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "200",
+            "icnh4": ".1"
+          }
+        ],
+        "icnd": "0",
+        "icdat": "20050101",
+        "icrp": "0",
+        "icrze": "1",
+        "icrz#": "1",
+        "icrt": "300"
+      },
+      "planting": {
+        "potKernelWt": "300",
+        "est_days_endjuv_to_init": "20",
+        "photoperiod_crit2": "24.0",
+        "photoperiod_crit1": "12.5",
+        "head_grain_no_max": "800",
+        "tt_flag_to_flower": "10",
+        "tt_flower_to_maturity": "680",
+        "row_spacing": "700",
+        "tt_maturity_to_ripe": "1",
+        "photoperiod_slope": "0",
+        "tt_emerg_to_endjuv": "412.851",
+        "x_stem_wt": "0    80",
+        "sowing_density": "9",
+        "tt_endjuv_to_init": "0.0",
+        "rue": "1.9",
+        "tt_flower_to_start_grain": "170",
+        "cultivar": "B_105_biochar",
+        "y_height": "0  2000",
+        "grain_gth_rate": "9.5",
+        "pdate": "1-may",
+        "depth": "30",
+        "edate": "1-nov"
+      },
+      "crop_name": "Maize",
+      "reporting_frequency": "harvesting",
+      "weather": {
+        "file": "met00000.met"
+      },
+      "fertilizer": {
+        "automatic_fertilizer": "off",
+        "subsequent_amount": "100",
+        "days_after_sowing": "45",
+        "initial_amount": "100",
+        "depth": "40",
+        "fert_criteria": "100",
+        "fert_critical": "90",
+        "type_auto": "NO3_N",
+        "type": "NH4NO3"
+      },
+      "start_date": "01/01/2005"
+    },
+    {
+      "reset": {
+        "date": "1-jan",
+        "water": "no",
+        "surfaceOM": "no",
+        "nitrogen": "no"
+      },
+      "output_variables": [
+        {
+          "name": "dd/mm/yyyy as Date"
+        },
+        {
+          "name": "planting_date"
+        },
+        {
+          "name": "biomass"
+        },
+        {
+          "name": "yield"
+        },
+        {
+          "name": "lai_max"
+        },
+        {
+          "name": "DaysAfterSowing"
+        },
+        {
+          "name": "flowering_das"
+        },
+        {
+          "name": "maturity_das"
+        },
+        {
+          "name": "RainIn"
+        },
+        {
+          "name": "Temp_year"
+        },
+        {
+          "name": "TempIn"
+        },
+        {
+          "name": "RadiationIn"
+        },
+        {
+          "name": "IrrigationIn"
+        },
+        {
+          "name": "WaterUse"
+        },
+        {
+          "name": "actual_ET"
+        },
+        {
+          "name": "N_uptake"
+        },
+        {
+          "name": "FertiliserIn"
+        },
+        {
+          "name": "NO3_leaching"
+        },
+        {
+          "name": "N2Oemission_year"
+        },
+        {
+          "name": "N2OemissionIn"
+        },
+        {
+          "name": "CO2emission_year"
+        },
+        {
+          "name": "CO2emissionIn"
+        }
+      ],
+      "irrigation": {
+        "default_cl_conc": "0.0",
+        "default_nh4_conc": "0.0",
+        "default_no3_conc": "0.0",
+        "allocation_limits": "off",
+        "allocation": "10",
+        "efficiency": "1",
+        "asw_depth": "600",
+        "crit_fr_asw": "0.75",
+        "automatic_irrigation": "off"
+      },
+      "Soilprofile": 0,
+      "log": "",
+      "end_date": "31/12/2018",
+      "initial_condition": {
+        "icrip": "100",
+        "standing_fraction": "0",
+        "icrn": ".5",
+        "icrdp": "30",
+        "water_fraction_full": "0.5",
+        "icrag": "500",
+        "soilLayer": [
+          {
+            "icno3": ".1",
+            "icbl": "5",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "15",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "30",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "100",
+            "icnh4": ".1"
+          },
+          {
+            "icno3": ".1",
+            "icbl": "200",
+            "icnh4": ".1"
+          }
+        ],
+        "icnd": "0",
+        "icdat": "20050101",
+        "icrp": "0",
+        "icrze": "1",
+        "icrz#": "1",
+        "icrt": "300"
+      },
+      "planting": {
+        "potKernelWt": "300",
+        "est_days_endjuv_to_init": "20",
+        "photoperiod_crit2": "24.0",
+        "photoperiod_crit1": "12.5",
+        "head_grain_no_max": "800",
+        "tt_flag_to_flower": "10",
+        "tt_flower_to_maturity": "680",
+        "row_spacing": "700",
+        "tt_maturity_to_ripe": "1",
+        "photoperiod_slope": "0",
+        "tt_emerg_to_endjuv": "400.422",
+        "x_stem_wt": "0    80",
+        "sowing_density": "9",
+        "tt_endjuv_to_init": "0.0",
+        "rue": "1.9",
+        "tt_flower_to_start_grain": "170",
+        "cultivar": "B_105_biochar",
+        "y_height": "0  2000",
+        "grain_gth_rate": "9.5",
+        "pdate": "1-may",
+        "depth": "30",
+        "edate": "1-nov"
+      },
+      "crop_name": "Maize",
+      "reporting_frequency": "harvesting",
+      "weather": {
+        "file": "met00008.met"
+      },
+      "fertilizer": {
+        "automatic_fertilizer": "off",
+        "subsequent_amount": "100",
+        "days_after_sowing": "45",
+        "initial_amount": "100",
+        "depth": "40",
+        "fert_criteria": "100",
+        "fert_critical": "90",
+        "type_auto": "NO3_N",
+        "type": "NH4NO3"
+      },
+      "start_date": "01/01/2005"
+    }
+  ]
+}
