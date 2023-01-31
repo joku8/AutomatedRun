@@ -1,9 +1,9 @@
 # AutomatedRun
 
 ## To-do list
+0- Clean the dir
 1- Data Aggregation
-2- Update Met
-3- Fix soils
+2-update the met
 
 
 ## Some resources:
