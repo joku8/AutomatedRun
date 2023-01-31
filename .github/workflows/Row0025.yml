@@ -66,7 +66,7 @@ jobs:
 
       - name: 6.4-Cleaning files sums
         run: |
-          find /pysims/data -name "*.spm" -type f -delete
+          find /pysims/data -name "*.sum" -type f -delete
 
       - name: 6.5-Cleaning files sums
         run: |
